@@ -1,0 +1,1434 @@
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineSystem.cmake:205 (message)"
+      - "CMakeLists.txt:1 (project)"
+    message: |
+      The system is: Darwin - 24.6.0 - arm64
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:1 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+      Compiler: /usr/bin/clang 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
+      
+      The C compiler identification is AppleClang, found in:
+        /Users/shvydkiy/Documents/Code/cpp/modern-graphics-engine/build/CMakeFiles/3.31.5/CompilerIdC/a.out
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:1 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+      Compiler: /usr/bin/clang++ 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.out"
+      
+      The CXX compiler identification is AppleClang, found in:
+        /Users/shvydkiy/Documents/Code/cpp/modern-graphics-engine/build/CMakeFiles/3.31.5/CompilerIdCXX/a.out
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:74 (try_compile)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:1 (project)"
+    checks:
+      - "Detecting C compiler ABI info"
+    directories:
+      source: "/Users/shvydkiy/Documents/Code/cpp/modern-graphics-engine/build/CMakeFiles/CMakeScratch/TryCompile-Gj4TGM"
+      binary: "/Users/shvydkiy/Documents/Code/cpp/modern-graphics-engine/build/CMakeFiles/CMakeScratch/TryCompile-Gj4TGM"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: "/Applications/Xcode-16.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk"
+    buildResult:
+      variable: "CMAKE_C_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/shvydkiy/Documents/Code/cpp/modern-graphics-engine/build/CMakeFiles/CMakeScratch/TryCompile-Gj4TGM'
+        
+        Run Build Command(s): /opt/homebrew/bin/ninja -v cmTC_dbebd
+        [1/2] /usr/bin/clang   -arch arm64 -isysroot /Applications/Xcode-16.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk   -v -Wl,-v -MD -MT CMakeFiles/cmTC_dbebd.dir/CMakeCCompilerABI.c.o -MF CMakeFiles/cmTC_dbebd.dir/CMakeCCompilerABI.c.o.d -o CMakeFiles/cmTC_dbebd.dir/CMakeCCompilerABI.c.o -c /opt/homebrew/share/cmake/Modules/CMakeCCompilerABI.c
+        Apple clang version 16.0.0 (clang-1600.0.26.6)
+        Target: arm64-apple-darwin24.6.0
+        Thread model: posix
+        InstalledDir: /Applications/Xcode-16.2.0.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
+        clang: warning: -Wl,-v: 'linker' input unused [-Wunused-command-line-argument]
+         "/Applications/Xcode-16.2.0.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" -cc1 -triple arm64-apple-macosx15.0.0 -Wundef-prefix=TARGET_OS_ -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -Werror=implicit-function-declaration -emit-obj -mrelax-all -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCCompilerABI.c -mrelocation-model pic -pic-level 2 -mframe-pointer=non-leaf -fno-strict-return -ffp-contract=on -fno-rounding-math -funwind-tables=1 -fobjc-msgsend-selector-stubs -target-sdk-version=15.2 -fvisibility-inlines-hidden-static-local-var -fno-modulemap-allow-subdirectory-search -target-cpu apple-m1 -target-feature +v8.5a -target-feature +aes -target-feature +crc -target-feature +dotprod -target-feature +fp-armv8 -target-feature +fp16fml -target-feature +lse -target-feature +ras -target-feature +rcpc -target-feature +rdm -target-feature +sha2 -target-feature +sha3 -target-feature +neon -target-feature +zcm -target-feature +zcz -target-feature +fullfp16 -target-abi darwinpcs -debugger-tuning=lldb -target-linker-version 1115.7.3 -v -fcoverage-compilation-dir=/Users/shvydkiy/Documents/Code/cpp/modern-graphics-engine/build/CMakeFiles/CMakeScratch/TryCompile-Gj4TGM -resource-dir /Applications/Xcode-16.2.0.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16 -dependency-file CMakeFiles/cmTC_dbebd.dir/CMakeCCompilerABI.c.o.d -skip-unused-modulemap-deps -MT CMakeFiles/cmTC_dbebd.dir/CMakeCCompilerABI.c.o -sys-header-deps -isysroot /Applications/Xcode-16.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk -internal-isystem /Applications/Xcode-16.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/local/include -internal-isystem /Applications/Xcode-16.2.0.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16/include -internal-externc-isystem /Applications/Xcode-16.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/include -internal-externc-isystem /Applications/Xcode-16.2.0.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -Wno-reorder-init-list -Wno-implicit-int-float-conversion -Wno-c99-designator -Wno-final-dtor-non-final-class -Wno-extra-semi-stmt -Wno-misleading-indentation -Wno-quoted-include-in-framework-header -Wno-implicit-fallthrough -Wno-enum-enum-conversion -Wno-enum-float-conversion -Wno-elaborated-enum-base -Wno-reserved-identifier -Wno-gnu-folding-constant -fdebug-compilation-dir=/Users/shvydkiy/Documents/Code/cpp/modern-graphics-engine/build/CMakeFiles/CMakeScratch/TryCompile-Gj4TGM -ferror-limit 19 -stack-protector 1 -fstack-check -mdarwin-stkchk-strong-link -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fgnuc-version=4.2.1 -fmax-type-align=16 -fcommon -clang-vendor-feature=+disableNonDependentMemberExprInCurrentInstantiation -fno-odr-hash-protocols -clang-vendor-feature=+enableAggressiveVLAFolding -clang-vendor-feature=+revert09abecef7bbf -clang-vendor-feature=+thisNoAlignAttr -clang-vendor-feature=+thisNoNullAttr -clang-vendor-feature=+disableAtImportPrivateFrameworkInImplementationError -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_dbebd.dir/CMakeCCompilerABI.c.o -x c /opt/homebrew/share/cmake/Modules/CMakeCCompilerABI.c
+        clang -cc1 version 16.0.0 (clang-1600.0.26.6) default target arm64-apple-darwin24.6.0
+        ignoring nonexistent directory "/Applications/Xcode-16.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/local/include"
+        ignoring nonexistent directory "/Applications/Xcode-16.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/Library/Frameworks"
+        #include "..." search starts here:
+        #include <...> search starts here:
+         /Applications/Xcode-16.2.0.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16/include
+         /Applications/Xcode-16.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/include
+         /Applications/Xcode-16.2.0.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include
+         /Applications/Xcode-16.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/System/Library/Frameworks (framework directory)
+        End of search list.
+        [2/2] : && /usr/bin/clang -arch arm64 -isysroot /Applications/Xcode-16.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names -v -Wl,-v CMakeFiles/cmTC_dbebd.dir/CMakeCCompilerABI.c.o -o cmTC_dbebd   && :
+        Apple clang version 16.0.0 (clang-1600.0.26.6)
+        Target: arm64-apple-darwin24.6.0
+        Thread model: posix
+        InstalledDir: /Applications/Xcode-16.2.0.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
+         "/Applications/Xcode-16.2.0.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld" -demangle -lto_library /Applications/Xcode-16.2.0.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libLTO.dylib -dynamic -arch arm64 -platform_version macos 15.0.0 15.2 -syslibroot /Applications/Xcode-16.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk -mllvm -enable-linkonceodr-outlining -o cmTC_dbebd -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_dbebd.dir/CMakeCCompilerABI.c.o -lSystem /Applications/Xcode-16.2.0.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16/lib/darwin/libclang_rt.osx.a
+        @(#)PROGRAM:ld PROJECT:ld-1115.7.3
+        BUILD 23:52:02 Dec  5 2024
+        configured to support archs: armv6 armv7 armv7s arm64 arm64e arm64_32 i386 x86_64 x86_64h armv6m armv7k armv7m armv7em
+        will use ld-classic for: armv6 armv7 armv7s i386 armv6m armv7k armv7m armv7em
+        LTO support using: LLVM version 16.0.0 (static support for 29, runtime is 29)
+        TAPI support using: Apple TAPI version 16.0.0 (tapi-1600.0.11.9)
+        Library search paths:
+        	/Applications/Xcode-16.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/lib
+        	/Applications/Xcode-16.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/lib/swift
+        Framework search paths:
+        	/Applications/Xcode-16.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/System/Library/Frameworks
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:113 (message)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:1 (project)"
+    message: |
+      Effective list of requested architectures (possibly empty)  : ""
+      Effective list of architectures found in the ABI info binary: "arm64"
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:182 (message)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:1 (project)"
+    message: |
+      Parsed C implicit include dir info: rv=done
+        found start of include info
+        found start of implicit include info
+          add: [/Applications/Xcode-16.2.0.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16/include]
+          add: [/Applications/Xcode-16.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/include]
+          add: [/Applications/Xcode-16.2.0.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include]
+        end of search list found
+        collapse include dir [/Applications/Xcode-16.2.0.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16/include] ==> [/Applications/Xcode-16.2.0.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16/include]
+        collapse include dir [/Applications/Xcode-16.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/include] ==> [/Applications/Xcode-16.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/include]
+        collapse include dir [/Applications/Xcode-16.2.0.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include] ==> [/Applications/Xcode-16.2.0.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include]
+        implicit include dirs: [/Applications/Xcode-16.2.0.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16/include;/Applications/Xcode-16.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/include;/Applications/Xcode-16.2.0.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include]
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:218 (message)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:1 (project)"
+    message: |
+      Parsed C implicit link information:
+        link line regex: [^( *|.*[/\\])(ld[0-9]*(\\.[a-z]+)?|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        linker tool regex: [^[ 	]*(->|")?[ 	]*(([^"]*[/\\])?(ld[0-9]*(\\.[a-z]+)?))("|,| |$)]
+        ignore line: [Change Dir: '/Users/shvydkiy/Documents/Code/cpp/modern-graphics-engine/build/CMakeFiles/CMakeScratch/TryCompile-Gj4TGM']
+        ignore line: []
+        ignore line: [Run Build Command(s): /opt/homebrew/bin/ninja -v cmTC_dbebd]
+        ignore line: [[1/2] /usr/bin/clang   -arch arm64 -isysroot /Applications/Xcode-16.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk   -v -Wl -v -MD -MT CMakeFiles/cmTC_dbebd.dir/CMakeCCompilerABI.c.o -MF CMakeFiles/cmTC_dbebd.dir/CMakeCCompilerABI.c.o.d -o CMakeFiles/cmTC_dbebd.dir/CMakeCCompilerABI.c.o -c /opt/homebrew/share/cmake/Modules/CMakeCCompilerABI.c]
+        ignore line: [Apple clang version 16.0.0 (clang-1600.0.26.6)]
+        ignore line: [Target: arm64-apple-darwin24.6.0]
+        ignore line: [Thread model: posix]
+        ignore line: [InstalledDir: /Applications/Xcode-16.2.0.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin]
+        ignore line: [clang: warning: -Wl -v: 'linker' input unused [-Wunused-command-line-argument]]
+        ignore line: [ "/Applications/Xcode-16.2.0.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" -cc1 -triple arm64-apple-macosx15.0.0 -Wundef-prefix=TARGET_OS_ -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -Werror=implicit-function-declaration -emit-obj -mrelax-all -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCCompilerABI.c -mrelocation-model pic -pic-level 2 -mframe-pointer=non-leaf -fno-strict-return -ffp-contract=on -fno-rounding-math -funwind-tables=1 -fobjc-msgsend-selector-stubs -target-sdk-version=15.2 -fvisibility-inlines-hidden-static-local-var -fno-modulemap-allow-subdirectory-search -target-cpu apple-m1 -target-feature +v8.5a -target-feature +aes -target-feature +crc -target-feature +dotprod -target-feature +fp-armv8 -target-feature +fp16fml -target-feature +lse -target-feature +ras -target-feature +rcpc -target-feature +rdm -target-feature +sha2 -target-feature +sha3 -target-feature +neon -target-feature +zcm -target-feature +zcz -target-feature +fullfp16 -target-abi darwinpcs -debugger-tuning=lldb -target-linker-version 1115.7.3 -v -fcoverage-compilation-dir=/Users/shvydkiy/Documents/Code/cpp/modern-graphics-engine/build/CMakeFiles/CMakeScratch/TryCompile-Gj4TGM -resource-dir /Applications/Xcode-16.2.0.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16 -dependency-file CMakeFiles/cmTC_dbebd.dir/CMakeCCompilerABI.c.o.d -skip-unused-modulemap-deps -MT CMakeFiles/cmTC_dbebd.dir/CMakeCCompilerABI.c.o -sys-header-deps -isysroot /Applications/Xcode-16.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk -internal-isystem /Applications/Xcode-16.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/local/include -internal-isystem /Applications/Xcode-16.2.0.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16/include -internal-externc-isystem /Applications/Xcode-16.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/include -internal-externc-isystem /Applications/Xcode-16.2.0.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -Wno-reorder-init-list -Wno-implicit-int-float-conversion -Wno-c99-designator -Wno-final-dtor-non-final-class -Wno-extra-semi-stmt -Wno-misleading-indentation -Wno-quoted-include-in-framework-header -Wno-implicit-fallthrough -Wno-enum-enum-conversion -Wno-enum-float-conversion -Wno-elaborated-enum-base -Wno-reserved-identifier -Wno-gnu-folding-constant -fdebug-compilation-dir=/Users/shvydkiy/Documents/Code/cpp/modern-graphics-engine/build/CMakeFiles/CMakeScratch/TryCompile-Gj4TGM -ferror-limit 19 -stack-protector 1 -fstack-check -mdarwin-stkchk-strong-link -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fgnuc-version=4.2.1 -fmax-type-align=16 -fcommon -clang-vendor-feature=+disableNonDependentMemberExprInCurrentInstantiation -fno-odr-hash-protocols -clang-vendor-feature=+enableAggressiveVLAFolding -clang-vendor-feature=+revert09abecef7bbf -clang-vendor-feature=+thisNoAlignAttr -clang-vendor-feature=+thisNoNullAttr -clang-vendor-feature=+disableAtImportPrivateFrameworkInImplementationError -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_dbebd.dir/CMakeCCompilerABI.c.o -x c /opt/homebrew/share/cmake/Modules/CMakeCCompilerABI.c]
+        ignore line: [clang -cc1 version 16.0.0 (clang-1600.0.26.6) default target arm64-apple-darwin24.6.0]
+        ignore line: [ignoring nonexistent directory "/Applications/Xcode-16.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/local/include"]
+        ignore line: [ignoring nonexistent directory "/Applications/Xcode-16.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/Library/Frameworks"]
+        ignore line: [#include "..." search starts here:]
+        ignore line: [#include <...> search starts here:]
+        ignore line: [ /Applications/Xcode-16.2.0.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16/include]
+        ignore line: [ /Applications/Xcode-16.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/include]
+        ignore line: [ /Applications/Xcode-16.2.0.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include]
+        ignore line: [ /Applications/Xcode-16.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/System/Library/Frameworks (framework directory)]
+        ignore line: [End of search list.]
+        ignore line: [[2/2] : && /usr/bin/clang -arch arm64 -isysroot /Applications/Xcode-16.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk -Wl -search_paths_first -Wl -headerpad_max_install_names -v -Wl -v CMakeFiles/cmTC_dbebd.dir/CMakeCCompilerABI.c.o -o cmTC_dbebd   && :]
+        ignore line: [Apple clang version 16.0.0 (clang-1600.0.26.6)]
+        ignore line: [Target: arm64-apple-darwin24.6.0]
+        ignore line: [Thread model: posix]
+        ignore line: [InstalledDir: /Applications/Xcode-16.2.0.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin]
+        link line: [ "/Applications/Xcode-16.2.0.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld" -demangle -lto_library /Applications/Xcode-16.2.0.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libLTO.dylib -dynamic -arch arm64 -platform_version macos 15.0.0 15.2 -syslibroot /Applications/Xcode-16.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk -mllvm -enable-linkonceodr-outlining -o cmTC_dbebd -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_dbebd.dir/CMakeCCompilerABI.c.o -lSystem /Applications/Xcode-16.2.0.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16/lib/darwin/libclang_rt.osx.a]
+          arg [/Applications/Xcode-16.2.0.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld] ==> ignore
+          arg [-demangle] ==> ignore
+          arg [-lto_library] ==> ignore, skip following value
+          arg [/Applications/Xcode-16.2.0.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libLTO.dylib] ==> skip value of -lto_library
+          arg [-dynamic] ==> ignore
+          arg [-arch] ==> ignore
+          arg [arm64] ==> ignore
+          arg [-platform_version] ==> ignore
+          arg [macos] ==> ignore
+          arg [15.0.0] ==> ignore
+          arg [15.2] ==> ignore
+          arg [-syslibroot] ==> ignore
+          arg [/Applications/Xcode-16.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk] ==> ignore
+          arg [-mllvm] ==> ignore
+          arg [-enable-linkonceodr-outlining] ==> ignore
+          arg [-o] ==> ignore
+          arg [cmTC_dbebd] ==> ignore
+          arg [-search_paths_first] ==> ignore
+          arg [-headerpad_max_install_names] ==> ignore
+          arg [-v] ==> ignore
+          arg [CMakeFiles/cmTC_dbebd.dir/CMakeCCompilerABI.c.o] ==> ignore
+          arg [-lSystem] ==> lib [System]
+          arg [/Applications/Xcode-16.2.0.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16/lib/darwin/libclang_rt.osx.a] ==> lib [/Applications/Xcode-16.2.0.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16/lib/darwin/libclang_rt.osx.a]
+        linker tool for 'C': /Applications/Xcode-16.2.0.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld
+        Library search paths: [;/Applications/Xcode-16.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/lib;/Applications/Xcode-16.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/lib/swift]
+        Framework search paths: [;/Applications/Xcode-16.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/System/Library/Frameworks]
+        remove lib [System]
+        remove lib [/Applications/Xcode-16.2.0.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16/lib/darwin/libclang_rt.osx.a]
+        collapse library dir [/Applications/Xcode-16.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/lib] ==> [/Applications/Xcode-16.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/lib]
+        collapse library dir [/Applications/Xcode-16.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/lib/swift] ==> [/Applications/Xcode-16.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/lib/swift]
+        collapse framework dir [/Applications/Xcode-16.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/System/Library/Frameworks] ==> [/Applications/Xcode-16.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/System/Library/Frameworks]
+        implicit libs: []
+        implicit objs: []
+        implicit dirs: [/Applications/Xcode-16.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/lib;/Applications/Xcode-16.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/lib/swift]
+        implicit fwks: [/Applications/Xcode-16.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/System/Library/Frameworks]
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/Internal/CMakeDetermineLinkerId.cmake:40 (message)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:255 (cmake_determine_linker_id)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:1 (project)"
+    message: |
+      Running the C compiler's linker: "/Applications/Xcode-16.2.0.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld" "-v"
+      @(#)PROGRAM:ld PROJECT:ld-1115.7.3
+      BUILD 23:52:02 Dec  5 2024
+      configured to support archs: armv6 armv7 armv7s arm64 arm64e arm64_32 i386 x86_64 x86_64h armv6m armv7k armv7m armv7em
+      will use ld-classic for: armv6 armv7 armv7s i386 armv6m armv7k armv7m armv7em
+      LTO support using: LLVM version 16.0.0 (static support for 29, runtime is 29)
+      TAPI support using: Apple TAPI version 16.0.0 (tapi-1600.0.11.9)
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:74 (try_compile)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:1 (project)"
+    checks:
+      - "Detecting CXX compiler ABI info"
+    directories:
+      source: "/Users/shvydkiy/Documents/Code/cpp/modern-graphics-engine/build/CMakeFiles/CMakeScratch/TryCompile-xH3rr8"
+      binary: "/Users/shvydkiy/Documents/Code/cpp/modern-graphics-engine/build/CMakeFiles/CMakeScratch/TryCompile-xH3rr8"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_SCAN_FOR_MODULES: "OFF"
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: "/Applications/Xcode-16.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk"
+    buildResult:
+      variable: "CMAKE_CXX_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/shvydkiy/Documents/Code/cpp/modern-graphics-engine/build/CMakeFiles/CMakeScratch/TryCompile-xH3rr8'
+        
+        Run Build Command(s): /opt/homebrew/bin/ninja -v cmTC_92d07
+        [1/2] /usr/bin/clang++   -arch arm64 -isysroot /Applications/Xcode-16.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk   -v -Wl,-v -MD -MT CMakeFiles/cmTC_92d07.dir/CMakeCXXCompilerABI.cpp.o -MF CMakeFiles/cmTC_92d07.dir/CMakeCXXCompilerABI.cpp.o.d -o CMakeFiles/cmTC_92d07.dir/CMakeCXXCompilerABI.cpp.o -c /opt/homebrew/share/cmake/Modules/CMakeCXXCompilerABI.cpp
+        Apple clang version 16.0.0 (clang-1600.0.26.6)
+        Target: arm64-apple-darwin24.6.0
+        Thread model: posix
+        InstalledDir: /Applications/Xcode-16.2.0.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
+        clang++: warning: -Wl,-v: 'linker' input unused [-Wunused-command-line-argument]
+        ignoring nonexistent directory "/Applications/Xcode-16.2.0.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"
+         "/Applications/Xcode-16.2.0.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" -cc1 -triple arm64-apple-macosx15.0.0 -Wundef-prefix=TARGET_OS_ -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -Werror=implicit-function-declaration -emit-obj -mrelax-all -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model pic -pic-level 2 -mframe-pointer=non-leaf -fno-strict-return -ffp-contract=on -fno-rounding-math -funwind-tables=1 -fobjc-msgsend-selector-stubs -target-sdk-version=15.2 -fvisibility-inlines-hidden-static-local-var -fno-modulemap-allow-subdirectory-search -target-cpu apple-m1 -target-feature +v8.5a -target-feature +aes -target-feature +crc -target-feature +dotprod -target-feature +fp-armv8 -target-feature +fp16fml -target-feature +lse -target-feature +ras -target-feature +rcpc -target-feature +rdm -target-feature +sha2 -target-feature +sha3 -target-feature +neon -target-feature +zcm -target-feature +zcz -target-feature +fullfp16 -target-abi darwinpcs -debugger-tuning=lldb -target-linker-version 1115.7.3 -v -fcoverage-compilation-dir=/Users/shvydkiy/Documents/Code/cpp/modern-graphics-engine/build/CMakeFiles/CMakeScratch/TryCompile-xH3rr8 -resource-dir /Applications/Xcode-16.2.0.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16 -dependency-file CMakeFiles/cmTC_92d07.dir/CMakeCXXCompilerABI.cpp.o.d -skip-unused-modulemap-deps -MT CMakeFiles/cmTC_92d07.dir/CMakeCXXCompilerABI.cpp.o -sys-header-deps -isysroot /Applications/Xcode-16.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk -internal-isystem /Applications/Xcode-16.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/include/c++/v1 -internal-isystem /Applications/Xcode-16.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/local/include -internal-isystem /Applications/Xcode-16.2.0.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16/include -internal-externc-isystem /Applications/Xcode-16.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/include -internal-externc-isystem /Applications/Xcode-16.2.0.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -Wno-reorder-init-list -Wno-implicit-int-float-conversion -Wno-c99-designator -Wno-final-dtor-non-final-class -Wno-extra-semi-stmt -Wno-misleading-indentation -Wno-quoted-include-in-framework-header -Wno-implicit-fallthrough -Wno-enum-enum-conversion -Wno-enum-float-conversion -Wno-elaborated-enum-base -Wno-reserved-identifier -Wno-gnu-folding-constant -fdeprecated-macro -fdebug-compilation-dir=/Users/shvydkiy/Documents/Code/cpp/modern-graphics-engine/build/CMakeFiles/CMakeScratch/TryCompile-xH3rr8 -ferror-limit 19 -stack-protector 1 -fstack-check -mdarwin-stkchk-strong-link -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fgnuc-version=4.2.1 -fno-cxx-modules -fcxx-exceptions -fexceptions -fmax-type-align=16 -fcommon -clang-vendor-feature=+disableNonDependentMemberExprInCurrentInstantiation -fno-odr-hash-protocols -clang-vendor-feature=+enableAggressiveVLAFolding -clang-vendor-feature=+revert09abecef7bbf -clang-vendor-feature=+thisNoAlignAttr -clang-vendor-feature=+thisNoNullAttr -clang-vendor-feature=+disableAtImportPrivateFrameworkInImplementationError -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_92d07.dir/CMakeCXXCompilerABI.cpp.o -x c++ /opt/homebrew/share/cmake/Modules/CMakeCXXCompilerABI.cpp
+        clang -cc1 version 16.0.0 (clang-1600.0.26.6) default target arm64-apple-darwin24.6.0
+        ignoring nonexistent directory "/Applications/Xcode-16.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/local/include"
+        ignoring nonexistent directory "/Applications/Xcode-16.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/Library/Frameworks"
+        #include "..." search starts here:
+        #include <...> search starts here:
+         /Applications/Xcode-16.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/include/c++/v1
+         /Applications/Xcode-16.2.0.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16/include
+         /Applications/Xcode-16.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/include
+         /Applications/Xcode-16.2.0.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include
+         /Applications/Xcode-16.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/System/Library/Frameworks (framework directory)
+        End of search list.
+        [2/2] : && /usr/bin/clang++ -arch arm64 -isysroot /Applications/Xcode-16.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names -v -Wl,-v CMakeFiles/cmTC_92d07.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_92d07   && :
+        Apple clang version 16.0.0 (clang-1600.0.26.6)
+        Target: arm64-apple-darwin24.6.0
+        Thread model: posix
+        InstalledDir: /Applications/Xcode-16.2.0.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
+         "/Applications/Xcode-16.2.0.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld" -demangle -lto_library /Applications/Xcode-16.2.0.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libLTO.dylib -dynamic -arch arm64 -platform_version macos 15.0.0 15.2 -syslibroot /Applications/Xcode-16.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk -mllvm -enable-linkonceodr-outlining -o cmTC_92d07 -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_92d07.dir/CMakeCXXCompilerABI.cpp.o -lc++ -lSystem /Applications/Xcode-16.2.0.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16/lib/darwin/libclang_rt.osx.a
+        @(#)PROGRAM:ld PROJECT:ld-1115.7.3
+        BUILD 23:52:02 Dec  5 2024
+        configured to support archs: armv6 armv7 armv7s arm64 arm64e arm64_32 i386 x86_64 x86_64h armv6m armv7k armv7m armv7em
+        will use ld-classic for: armv6 armv7 armv7s i386 armv6m armv7k armv7m armv7em
+        LTO support using: LLVM version 16.0.0 (static support for 29, runtime is 29)
+        TAPI support using: Apple TAPI version 16.0.0 (tapi-1600.0.11.9)
+        Library search paths:
+        	/Applications/Xcode-16.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/lib
+        	/Applications/Xcode-16.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/lib/swift
+        Framework search paths:
+        	/Applications/Xcode-16.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/System/Library/Frameworks
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:113 (message)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:1 (project)"
+    message: |
+      Effective list of requested architectures (possibly empty)  : ""
+      Effective list of architectures found in the ABI info binary: "arm64"
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:182 (message)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:1 (project)"
+    message: |
+      Parsed CXX implicit include dir info: rv=done
+        found start of include info
+        found start of implicit include info
+          add: [/Applications/Xcode-16.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/include/c++/v1]
+          add: [/Applications/Xcode-16.2.0.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16/include]
+          add: [/Applications/Xcode-16.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/include]
+          add: [/Applications/Xcode-16.2.0.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include]
+        end of search list found
+        collapse include dir [/Applications/Xcode-16.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/include/c++/v1] ==> [/Applications/Xcode-16.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/include/c++/v1]
+        collapse include dir [/Applications/Xcode-16.2.0.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16/include] ==> [/Applications/Xcode-16.2.0.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16/include]
+        collapse include dir [/Applications/Xcode-16.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/include] ==> [/Applications/Xcode-16.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/include]
+        collapse include dir [/Applications/Xcode-16.2.0.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include] ==> [/Applications/Xcode-16.2.0.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include]
+        implicit include dirs: [/Applications/Xcode-16.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/include/c++/v1;/Applications/Xcode-16.2.0.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16/include;/Applications/Xcode-16.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/include;/Applications/Xcode-16.2.0.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include]
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:218 (message)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:1 (project)"
+    message: |
+      Parsed CXX implicit link information:
+        link line regex: [^( *|.*[/\\])(ld[0-9]*(\\.[a-z]+)?|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        linker tool regex: [^[ 	]*(->|")?[ 	]*(([^"]*[/\\])?(ld[0-9]*(\\.[a-z]+)?))("|,| |$)]
+        ignore line: [Change Dir: '/Users/shvydkiy/Documents/Code/cpp/modern-graphics-engine/build/CMakeFiles/CMakeScratch/TryCompile-xH3rr8']
+        ignore line: []
+        ignore line: [Run Build Command(s): /opt/homebrew/bin/ninja -v cmTC_92d07]
+        ignore line: [[1/2] /usr/bin/clang++   -arch arm64 -isysroot /Applications/Xcode-16.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk   -v -Wl -v -MD -MT CMakeFiles/cmTC_92d07.dir/CMakeCXXCompilerABI.cpp.o -MF CMakeFiles/cmTC_92d07.dir/CMakeCXXCompilerABI.cpp.o.d -o CMakeFiles/cmTC_92d07.dir/CMakeCXXCompilerABI.cpp.o -c /opt/homebrew/share/cmake/Modules/CMakeCXXCompilerABI.cpp]
+        ignore line: [Apple clang version 16.0.0 (clang-1600.0.26.6)]
+        ignore line: [Target: arm64-apple-darwin24.6.0]
+        ignore line: [Thread model: posix]
+        ignore line: [InstalledDir: /Applications/Xcode-16.2.0.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin]
+        ignore line: [clang++: warning: -Wl -v: 'linker' input unused [-Wunused-command-line-argument]]
+        ignore line: [ignoring nonexistent directory "/Applications/Xcode-16.2.0.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"]
+        ignore line: [ "/Applications/Xcode-16.2.0.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" -cc1 -triple arm64-apple-macosx15.0.0 -Wundef-prefix=TARGET_OS_ -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -Werror=implicit-function-declaration -emit-obj -mrelax-all -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model pic -pic-level 2 -mframe-pointer=non-leaf -fno-strict-return -ffp-contract=on -fno-rounding-math -funwind-tables=1 -fobjc-msgsend-selector-stubs -target-sdk-version=15.2 -fvisibility-inlines-hidden-static-local-var -fno-modulemap-allow-subdirectory-search -target-cpu apple-m1 -target-feature +v8.5a -target-feature +aes -target-feature +crc -target-feature +dotprod -target-feature +fp-armv8 -target-feature +fp16fml -target-feature +lse -target-feature +ras -target-feature +rcpc -target-feature +rdm -target-feature +sha2 -target-feature +sha3 -target-feature +neon -target-feature +zcm -target-feature +zcz -target-feature +fullfp16 -target-abi darwinpcs -debugger-tuning=lldb -target-linker-version 1115.7.3 -v -fcoverage-compilation-dir=/Users/shvydkiy/Documents/Code/cpp/modern-graphics-engine/build/CMakeFiles/CMakeScratch/TryCompile-xH3rr8 -resource-dir /Applications/Xcode-16.2.0.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16 -dependency-file CMakeFiles/cmTC_92d07.dir/CMakeCXXCompilerABI.cpp.o.d -skip-unused-modulemap-deps -MT CMakeFiles/cmTC_92d07.dir/CMakeCXXCompilerABI.cpp.o -sys-header-deps -isysroot /Applications/Xcode-16.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk -internal-isystem /Applications/Xcode-16.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/include/c++/v1 -internal-isystem /Applications/Xcode-16.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/local/include -internal-isystem /Applications/Xcode-16.2.0.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16/include -internal-externc-isystem /Applications/Xcode-16.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/include -internal-externc-isystem /Applications/Xcode-16.2.0.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -Wno-reorder-init-list -Wno-implicit-int-float-conversion -Wno-c99-designator -Wno-final-dtor-non-final-class -Wno-extra-semi-stmt -Wno-misleading-indentation -Wno-quoted-include-in-framework-header -Wno-implicit-fallthrough -Wno-enum-enum-conversion -Wno-enum-float-conversion -Wno-elaborated-enum-base -Wno-reserved-identifier -Wno-gnu-folding-constant -fdeprecated-macro -fdebug-compilation-dir=/Users/shvydkiy/Documents/Code/cpp/modern-graphics-engine/build/CMakeFiles/CMakeScratch/TryCompile-xH3rr8 -ferror-limit 19 -stack-protector 1 -fstack-check -mdarwin-stkchk-strong-link -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fgnuc-version=4.2.1 -fno-cxx-modules -fcxx-exceptions -fexceptions -fmax-type-align=16 -fcommon -clang-vendor-feature=+disableNonDependentMemberExprInCurrentInstantiation -fno-odr-hash-protocols -clang-vendor-feature=+enableAggressiveVLAFolding -clang-vendor-feature=+revert09abecef7bbf -clang-vendor-feature=+thisNoAlignAttr -clang-vendor-feature=+thisNoNullAttr -clang-vendor-feature=+disableAtImportPrivateFrameworkInImplementationError -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_92d07.dir/CMakeCXXCompilerABI.cpp.o -x c++ /opt/homebrew/share/cmake/Modules/CMakeCXXCompilerABI.cpp]
+        ignore line: [clang -cc1 version 16.0.0 (clang-1600.0.26.6) default target arm64-apple-darwin24.6.0]
+        ignore line: [ignoring nonexistent directory "/Applications/Xcode-16.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/local/include"]
+        ignore line: [ignoring nonexistent directory "/Applications/Xcode-16.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/Library/Frameworks"]
+        ignore line: [#include "..." search starts here:]
+        ignore line: [#include <...> search starts here:]
+        ignore line: [ /Applications/Xcode-16.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/include/c++/v1]
+        ignore line: [ /Applications/Xcode-16.2.0.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16/include]
+        ignore line: [ /Applications/Xcode-16.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/include]
+        ignore line: [ /Applications/Xcode-16.2.0.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include]
+        ignore line: [ /Applications/Xcode-16.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/System/Library/Frameworks (framework directory)]
+        ignore line: [End of search list.]
+        ignore line: [[2/2] : && /usr/bin/clang++ -arch arm64 -isysroot /Applications/Xcode-16.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk -Wl -search_paths_first -Wl -headerpad_max_install_names -v -Wl -v CMakeFiles/cmTC_92d07.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_92d07   && :]
+        ignore line: [Apple clang version 16.0.0 (clang-1600.0.26.6)]
+        ignore line: [Target: arm64-apple-darwin24.6.0]
+        ignore line: [Thread model: posix]
+        ignore line: [InstalledDir: /Applications/Xcode-16.2.0.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin]
+        link line: [ "/Applications/Xcode-16.2.0.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld" -demangle -lto_library /Applications/Xcode-16.2.0.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libLTO.dylib -dynamic -arch arm64 -platform_version macos 15.0.0 15.2 -syslibroot /Applications/Xcode-16.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk -mllvm -enable-linkonceodr-outlining -o cmTC_92d07 -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_92d07.dir/CMakeCXXCompilerABI.cpp.o -lc++ -lSystem /Applications/Xcode-16.2.0.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16/lib/darwin/libclang_rt.osx.a]
+          arg [/Applications/Xcode-16.2.0.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld] ==> ignore
+          arg [-demangle] ==> ignore
+          arg [-lto_library] ==> ignore, skip following value
+          arg [/Applications/Xcode-16.2.0.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libLTO.dylib] ==> skip value of -lto_library
+          arg [-dynamic] ==> ignore
+          arg [-arch] ==> ignore
+          arg [arm64] ==> ignore
+          arg [-platform_version] ==> ignore
+          arg [macos] ==> ignore
+          arg [15.0.0] ==> ignore
+          arg [15.2] ==> ignore
+          arg [-syslibroot] ==> ignore
+          arg [/Applications/Xcode-16.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk] ==> ignore
+          arg [-mllvm] ==> ignore
+          arg [-enable-linkonceodr-outlining] ==> ignore
+          arg [-o] ==> ignore
+          arg [cmTC_92d07] ==> ignore
+          arg [-search_paths_first] ==> ignore
+          arg [-headerpad_max_install_names] ==> ignore
+          arg [-v] ==> ignore
+          arg [CMakeFiles/cmTC_92d07.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+          arg [-lc++] ==> lib [c++]
+          arg [-lSystem] ==> lib [System]
+          arg [/Applications/Xcode-16.2.0.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16/lib/darwin/libclang_rt.osx.a] ==> lib [/Applications/Xcode-16.2.0.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16/lib/darwin/libclang_rt.osx.a]
+        linker tool for 'CXX': /Applications/Xcode-16.2.0.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld
+        Library search paths: [;/Applications/Xcode-16.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/lib;/Applications/Xcode-16.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/lib/swift]
+        Framework search paths: [;/Applications/Xcode-16.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/System/Library/Frameworks]
+        remove lib [System]
+        remove lib [/Applications/Xcode-16.2.0.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16/lib/darwin/libclang_rt.osx.a]
+        collapse library dir [/Applications/Xcode-16.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/lib] ==> [/Applications/Xcode-16.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/lib]
+        collapse library dir [/Applications/Xcode-16.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/lib/swift] ==> [/Applications/Xcode-16.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/lib/swift]
+        collapse framework dir [/Applications/Xcode-16.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/System/Library/Frameworks] ==> [/Applications/Xcode-16.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/System/Library/Frameworks]
+        implicit libs: [c++]
+        implicit objs: []
+        implicit dirs: [/Applications/Xcode-16.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/lib;/Applications/Xcode-16.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/lib/swift]
+        implicit fwks: [/Applications/Xcode-16.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/System/Library/Frameworks]
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/Internal/CMakeDetermineLinkerId.cmake:40 (message)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:255 (cmake_determine_linker_id)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:1 (project)"
+    message: |
+      Running the CXX compiler's linker: "/Applications/Xcode-16.2.0.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld" "-v"
+      @(#)PROGRAM:ld PROJECT:ld-1115.7.3
+      BUILD 23:52:02 Dec  5 2024
+      configured to support archs: armv6 armv7 armv7s arm64 arm64e arm64_32 i386 x86_64 x86_64h armv6m armv7k armv7m armv7em
+      will use ld-classic for: armv6 armv7 armv7s i386 armv6m armv7k armv7m armv7em
+      LTO support using: LLVM version 16.0.0 (static support for 29, runtime is 29)
+      TAPI support using: Apple TAPI version 16.0.0 (tapi-1600.0.11.9)
+...
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineSystem.cmake:212 (message)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      The system is: Darwin - 24.6.0 - arm64
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerId.cmake:462 (find_file)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerId.cmake:500 (CMAKE_DETERMINE_COMPILER_ID_WRITE)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerId.cmake:8 (CMAKE_DETERMINE_COMPILER_ID_BUILD)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake:125 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    mode: "file"
+    variable: "src_in"
+    description: "Path to a file."
+    settings:
+      SearchFramework: "FIRST"
+      SearchAppBundle: "FIRST"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "CMakeCXXCompilerId.cpp.in"
+    candidate_directories:
+      - "/opt/homebrew/share/cmake/Modules/"
+    found: "/opt/homebrew/share/cmake/Modules/CMakeCXXCompilerId.cpp.in"
+    search_context:
+      ENV{PATH}:
+        - "/Users/shvydkiy/.ya/tools/v4/8427538159/bin"
+        - "/Users/shvydkiy/.ya/tools/v4/8427538159/bin"
+        - "/Users/shvydkiy/.mobinfra"
+        - "/Users/shvydkiy/.mobinfra"
+        - "/Users/shvydkiy/.pub-cache/bin"
+        - "/Users/shvydkiy/.mobinfra/fvm"
+        - "/Users/shvydkiy/.rbenv/shims"
+        - "/Users/shvydkiy/Library/Android/sdk/cmdline-tools/10.0/bin"
+        - "/Users/shvydkiy/Library/Android/sdk/platform-tools"
+        - "/Users/shvydkiy/Library/Python/3.13/bin/"
+        - "/opt/homebrew/bin"
+        - "/Users/shvydkiy/yandex-cloud/bin"
+        - "/Users/shvydkiy/.mobinfra"
+        - "/Users/shvydkiy/.mobinfra"
+        - "/Users/shvydkiy/.pub-cache/bin"
+        - "/Users/shvydkiy/.mobinfra/fvm"
+        - "/Users/shvydkiy/.rbenv/shims"
+        - "/Users/shvydkiy/Library/Android/sdk/cmdline-tools/10.0/bin"
+        - "/Users/shvydkiy/Library/Android/sdk/platform-tools"
+        - "/Users/shvydkiy/Library/Python/3.13/bin/"
+        - "/opt/homebrew/bin"
+        - "/opt/homebrew/bin"
+        - "/opt/homebrew/sbin"
+        - "/usr/local/bin"
+        - "/System/Cryptexes/App/usr/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
+        - "/Library/Apple/usr/bin"
+        - "/usr/local/munki"
+        - "/Users/shvydkiy/.mobinfra"
+        - "/Users/shvydkiy/.pub-cache/bin"
+        - "/Users/shvydkiy/.mobinfra/fvm"
+        - "/Users/shvydkiy/.rbenv/shims"
+        - "/Users/shvydkiy/Library/Android/sdk/cmdline-tools/10.0/bin"
+        - "/Users/shvydkiy/Library/Android/sdk/platform-tools"
+        - "/Users/shvydkiy/Library/Python/3.13/bin/"
+        - "/Users/shvydkiy/yandex-cloud/bin"
+        - "/Users/shvydkiy/Library/Application"
+      CMAKE_INSTALL_PREFIX: "/usr/local"
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake:125 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+      Compiler: /usr/bin/clang++ 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.out"
+      
+      The CXX compiler identification is AppleClang, found in:
+        /Users/shvydkiy/Documents/Code/cpp/modern-graphics-engine/build/CMakeFiles/4.1.1/CompilerIdCXX/a.out
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerId.cmake:290 (message)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake:125 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Detecting CXX compiler apple sysroot: "/usr/bin/clang++" "-E" "apple-sdk.cpp"
+        # 1 "apple-sdk.cpp"
+        # 1 "<built-in>" 1
+        # 1 "<built-in>" 3
+        # 439 "<built-in>" 3
+        # 1 "<command line>" 1
+        # 1 "<built-in>" 2
+        # 1 "apple-sdk.cpp" 2
+        # 1 "/Applications/Xcode-16.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/AvailabilityMacros.h" 1 3 4
+        # 89 "/Applications/Xcode-16.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/AvailabilityMacros.h" 3 4
+        # 1 "/Applications/Xcode-16.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/AvailabilityVersions.h" 1 3 4
+        # 90 "/Applications/Xcode-16.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/AvailabilityMacros.h" 2 3 4
+        # 1 "/Applications/Xcode-16.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/TargetConditionals.h" 1 3 4
+        # 91 "/Applications/Xcode-16.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/AvailabilityMacros.h" 2 3 4
+        # 207 "/Applications/Xcode-16.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/AvailabilityMacros.h" 3 4
+        # 1 "/Applications/Xcode-16.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/Availability.h" 1 3 4
+        # 177 "/Applications/Xcode-16.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/Availability.h" 3 4
+        # 1 "/Applications/Xcode-16.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/AvailabilityInternal.h" 1 3 4
+        # 178 "/Applications/Xcode-16.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/Availability.h" 2 3 4
+        # 1 "/Applications/Xcode-16.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/AvailabilityInternalLegacy.h" 1 3 4
+        # 179 "/Applications/Xcode-16.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/Availability.h" 2 3 4
+        # 208 "/Applications/Xcode-16.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/AvailabilityMacros.h" 2 3 4
+        # 2 "apple-sdk.cpp" 2
+        
+        
+      Found apple sysroot: /Applications/Xcode-16.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:83 (try_compile)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:3 (project)"
+    checks:
+      - "Detecting CXX compiler ABI info"
+    directories:
+      source: "/Users/shvydkiy/Documents/Code/cpp/modern-graphics-engine/build/CMakeFiles/CMakeScratch/TryCompile-BZ2j98"
+      binary: "/Users/shvydkiy/Documents/Code/cpp/modern-graphics-engine/build/CMakeFiles/CMakeScratch/TryCompile-BZ2j98"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_CXX_SCAN_FOR_MODULES: "OFF"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: "/Applications/Xcode-16.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk"
+    buildResult:
+      variable: "CMAKE_CXX_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/shvydkiy/Documents/Code/cpp/modern-graphics-engine/build/CMakeFiles/CMakeScratch/TryCompile-BZ2j98'
+        
+        Run Build Command(s): /opt/homebrew/bin/ninja -v cmTC_42d67
+        [1/2] /usr/bin/clang++   -arch arm64 -isysroot /Applications/Xcode-16.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk   -v -Wl,-v -MD -MT CMakeFiles/cmTC_42d67.dir/CMakeCXXCompilerABI.cpp.o -MF CMakeFiles/cmTC_42d67.dir/CMakeCXXCompilerABI.cpp.o.d -o CMakeFiles/cmTC_42d67.dir/CMakeCXXCompilerABI.cpp.o -c /opt/homebrew/share/cmake/Modules/CMakeCXXCompilerABI.cpp
+        Apple clang version 16.0.0 (clang-1600.0.26.6)
+        Target: arm64-apple-darwin24.6.0
+        Thread model: posix
+        InstalledDir: /Applications/Xcode-16.2.0.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
+        clang++: warning: -Wl,-v: 'linker' input unused [-Wunused-command-line-argument]
+        ignoring nonexistent directory "/Applications/Xcode-16.2.0.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"
+         "/Applications/Xcode-16.2.0.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" -cc1 -triple arm64-apple-macosx15.0.0 -Wundef-prefix=TARGET_OS_ -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -Werror=implicit-function-declaration -emit-obj -mrelax-all -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model pic -pic-level 2 -mframe-pointer=non-leaf -fno-strict-return -ffp-contract=on -fno-rounding-math -funwind-tables=1 -fobjc-msgsend-selector-stubs -target-sdk-version=15.2 -fvisibility-inlines-hidden-static-local-var -fno-modulemap-allow-subdirectory-search -target-cpu apple-m1 -target-feature +v8.5a -target-feature +aes -target-feature +crc -target-feature +dotprod -target-feature +fp-armv8 -target-feature +fp16fml -target-feature +lse -target-feature +ras -target-feature +rcpc -target-feature +rdm -target-feature +sha2 -target-feature +sha3 -target-feature +neon -target-feature +zcm -target-feature +zcz -target-feature +fullfp16 -target-abi darwinpcs -debugger-tuning=lldb -target-linker-version 1115.7.3 -v -fcoverage-compilation-dir=/Users/shvydkiy/Documents/Code/cpp/modern-graphics-engine/build/CMakeFiles/CMakeScratch/TryCompile-BZ2j98 -resource-dir /Applications/Xcode-16.2.0.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16 -dependency-file CMakeFiles/cmTC_42d67.dir/CMakeCXXCompilerABI.cpp.o.d -skip-unused-modulemap-deps -MT CMakeFiles/cmTC_42d67.dir/CMakeCXXCompilerABI.cpp.o -sys-header-deps -isysroot /Applications/Xcode-16.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk -internal-isystem /Applications/Xcode-16.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/include/c++/v1 -internal-isystem /Applications/Xcode-16.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/local/include -internal-isystem /Applications/Xcode-16.2.0.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16/include -internal-externc-isystem /Applications/Xcode-16.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/include -internal-externc-isystem /Applications/Xcode-16.2.0.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -Wno-reorder-init-list -Wno-implicit-int-float-conversion -Wno-c99-designator -Wno-final-dtor-non-final-class -Wno-extra-semi-stmt -Wno-misleading-indentation -Wno-quoted-include-in-framework-header -Wno-implicit-fallthrough -Wno-enum-enum-conversion -Wno-enum-float-conversion -Wno-elaborated-enum-base -Wno-reserved-identifier -Wno-gnu-folding-constant -fdeprecated-macro -fdebug-compilation-dir=/Users/shvydkiy/Documents/Code/cpp/modern-graphics-engine/build/CMakeFiles/CMakeScratch/TryCompile-BZ2j98 -ferror-limit 19 -stack-protector 1 -fstack-check -mdarwin-stkchk-strong-link -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fgnuc-version=4.2.1 -fno-cxx-modules -fcxx-exceptions -fexceptions -fmax-type-align=16 -fcommon -clang-vendor-feature=+disableNonDependentMemberExprInCurrentInstantiation -fno-odr-hash-protocols -clang-vendor-feature=+enableAggressiveVLAFolding -clang-vendor-feature=+revert09abecef7bbf -clang-vendor-feature=+thisNoAlignAttr -clang-vendor-feature=+thisNoNullAttr -clang-vendor-feature=+disableAtImportPrivateFrameworkInImplementationError -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_42d67.dir/CMakeCXXCompilerABI.cpp.o -x c++ /opt/homebrew/share/cmake/Modules/CMakeCXXCompilerABI.cpp
+        clang -cc1 version 16.0.0 (clang-1600.0.26.6) default target arm64-apple-darwin24.6.0
+        ignoring nonexistent directory "/Applications/Xcode-16.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/local/include"
+        ignoring nonexistent directory "/Applications/Xcode-16.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/Library/Frameworks"
+        #include "..." search starts here:
+        #include <...> search starts here:
+         /Applications/Xcode-16.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/include/c++/v1
+         /Applications/Xcode-16.2.0.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16/include
+         /Applications/Xcode-16.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/include
+         /Applications/Xcode-16.2.0.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include
+         /Applications/Xcode-16.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/System/Library/Frameworks (framework directory)
+        End of search list.
+        [2/2] : && /usr/bin/clang++ -arch arm64 -isysroot /Applications/Xcode-16.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names  -v -Wl,-v CMakeFiles/cmTC_42d67.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_42d67   && :
+        Apple clang version 16.0.0 (clang-1600.0.26.6)
+        Target: arm64-apple-darwin24.6.0
+        Thread model: posix
+        InstalledDir: /Applications/Xcode-16.2.0.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
+         "/Applications/Xcode-16.2.0.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld" -demangle -lto_library /Applications/Xcode-16.2.0.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libLTO.dylib -dynamic -arch arm64 -platform_version macos 15.0.0 15.2 -syslibroot /Applications/Xcode-16.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk -mllvm -enable-linkonceodr-outlining -o cmTC_42d67 -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_42d67.dir/CMakeCXXCompilerABI.cpp.o -lc++ -lSystem /Applications/Xcode-16.2.0.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16/lib/darwin/libclang_rt.osx.a
+        @(#)PROGRAM:ld PROJECT:ld-1115.7.3
+        BUILD 23:52:02 Dec  5 2024
+        configured to support archs: armv6 armv7 armv7s arm64 arm64e arm64_32 i386 x86_64 x86_64h armv6m armv7k armv7m armv7em
+        will use ld-classic for: armv6 armv7 armv7s i386 armv6m armv7k armv7m armv7em
+        LTO support using: LLVM version 16.0.0 (static support for 29, runtime is 29)
+        TAPI support using: Apple TAPI version 16.0.0 (tapi-1600.0.11.9)
+        Library search paths:
+        	/Applications/Xcode-16.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/lib
+        	/Applications/Xcode-16.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/lib/swift
+        Framework search paths:
+        	/Applications/Xcode-16.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/System/Library/Frameworks
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:122 (message)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Effective list of requested architectures (possibly empty)  : ""
+      Effective list of architectures found in the ABI info binary: "arm64"
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:217 (message)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Parsed CXX implicit include dir info: rv=done
+        found start of include info
+        found start of implicit include info
+          add: [/Applications/Xcode-16.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/include/c++/v1]
+          add: [/Applications/Xcode-16.2.0.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16/include]
+          add: [/Applications/Xcode-16.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/include]
+          add: [/Applications/Xcode-16.2.0.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include]
+        end of search list found
+        collapse include dir [/Applications/Xcode-16.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/include/c++/v1] ==> [/Applications/Xcode-16.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/include/c++/v1]
+        collapse include dir [/Applications/Xcode-16.2.0.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16/include] ==> [/Applications/Xcode-16.2.0.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16/include]
+        collapse include dir [/Applications/Xcode-16.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/include] ==> [/Applications/Xcode-16.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/include]
+        collapse include dir [/Applications/Xcode-16.2.0.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include] ==> [/Applications/Xcode-16.2.0.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include]
+        implicit include dirs: [/Applications/Xcode-16.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/include/c++/v1;/Applications/Xcode-16.2.0.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16/include;/Applications/Xcode-16.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/include;/Applications/Xcode-16.2.0.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include]
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:253 (message)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Parsed CXX implicit link information:
+        link line regex: [^( *|.*[/\\])(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        linker tool regex: [^[ 	]*(->|")?[ 	]*(([^"]*[/\\])?(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)))("|,| |$)]
+        ignore line: [Change Dir: '/Users/shvydkiy/Documents/Code/cpp/modern-graphics-engine/build/CMakeFiles/CMakeScratch/TryCompile-BZ2j98']
+        ignore line: []
+        ignore line: [Run Build Command(s): /opt/homebrew/bin/ninja -v cmTC_42d67]
+        ignore line: [[1/2] /usr/bin/clang++   -arch arm64 -isysroot /Applications/Xcode-16.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk   -v -Wl -v -MD -MT CMakeFiles/cmTC_42d67.dir/CMakeCXXCompilerABI.cpp.o -MF CMakeFiles/cmTC_42d67.dir/CMakeCXXCompilerABI.cpp.o.d -o CMakeFiles/cmTC_42d67.dir/CMakeCXXCompilerABI.cpp.o -c /opt/homebrew/share/cmake/Modules/CMakeCXXCompilerABI.cpp]
+        ignore line: [Apple clang version 16.0.0 (clang-1600.0.26.6)]
+        ignore line: [Target: arm64-apple-darwin24.6.0]
+        ignore line: [Thread model: posix]
+        ignore line: [InstalledDir: /Applications/Xcode-16.2.0.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin]
+        ignore line: [clang++: warning: -Wl -v: 'linker' input unused [-Wunused-command-line-argument]]
+        ignore line: [ignoring nonexistent directory "/Applications/Xcode-16.2.0.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"]
+        ignore line: [ "/Applications/Xcode-16.2.0.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" -cc1 -triple arm64-apple-macosx15.0.0 -Wundef-prefix=TARGET_OS_ -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -Werror=implicit-function-declaration -emit-obj -mrelax-all -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model pic -pic-level 2 -mframe-pointer=non-leaf -fno-strict-return -ffp-contract=on -fno-rounding-math -funwind-tables=1 -fobjc-msgsend-selector-stubs -target-sdk-version=15.2 -fvisibility-inlines-hidden-static-local-var -fno-modulemap-allow-subdirectory-search -target-cpu apple-m1 -target-feature +v8.5a -target-feature +aes -target-feature +crc -target-feature +dotprod -target-feature +fp-armv8 -target-feature +fp16fml -target-feature +lse -target-feature +ras -target-feature +rcpc -target-feature +rdm -target-feature +sha2 -target-feature +sha3 -target-feature +neon -target-feature +zcm -target-feature +zcz -target-feature +fullfp16 -target-abi darwinpcs -debugger-tuning=lldb -target-linker-version 1115.7.3 -v -fcoverage-compilation-dir=/Users/shvydkiy/Documents/Code/cpp/modern-graphics-engine/build/CMakeFiles/CMakeScratch/TryCompile-BZ2j98 -resource-dir /Applications/Xcode-16.2.0.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16 -dependency-file CMakeFiles/cmTC_42d67.dir/CMakeCXXCompilerABI.cpp.o.d -skip-unused-modulemap-deps -MT CMakeFiles/cmTC_42d67.dir/CMakeCXXCompilerABI.cpp.o -sys-header-deps -isysroot /Applications/Xcode-16.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk -internal-isystem /Applications/Xcode-16.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/include/c++/v1 -internal-isystem /Applications/Xcode-16.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/local/include -internal-isystem /Applications/Xcode-16.2.0.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16/include -internal-externc-isystem /Applications/Xcode-16.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/include -internal-externc-isystem /Applications/Xcode-16.2.0.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -Wno-reorder-init-list -Wno-implicit-int-float-conversion -Wno-c99-designator -Wno-final-dtor-non-final-class -Wno-extra-semi-stmt -Wno-misleading-indentation -Wno-quoted-include-in-framework-header -Wno-implicit-fallthrough -Wno-enum-enum-conversion -Wno-enum-float-conversion -Wno-elaborated-enum-base -Wno-reserved-identifier -Wno-gnu-folding-constant -fdeprecated-macro -fdebug-compilation-dir=/Users/shvydkiy/Documents/Code/cpp/modern-graphics-engine/build/CMakeFiles/CMakeScratch/TryCompile-BZ2j98 -ferror-limit 19 -stack-protector 1 -fstack-check -mdarwin-stkchk-strong-link -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fgnuc-version=4.2.1 -fno-cxx-modules -fcxx-exceptions -fexceptions -fmax-type-align=16 -fcommon -clang-vendor-feature=+disableNonDependentMemberExprInCurrentInstantiation -fno-odr-hash-protocols -clang-vendor-feature=+enableAggressiveVLAFolding -clang-vendor-feature=+revert09abecef7bbf -clang-vendor-feature=+thisNoAlignAttr -clang-vendor-feature=+thisNoNullAttr -clang-vendor-feature=+disableAtImportPrivateFrameworkInImplementationError -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_42d67.dir/CMakeCXXCompilerABI.cpp.o -x c++ /opt/homebrew/share/cmake/Modules/CMakeCXXCompilerABI.cpp]
+        ignore line: [clang -cc1 version 16.0.0 (clang-1600.0.26.6) default target arm64-apple-darwin24.6.0]
+        ignore line: [ignoring nonexistent directory "/Applications/Xcode-16.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/local/include"]
+        ignore line: [ignoring nonexistent directory "/Applications/Xcode-16.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/Library/Frameworks"]
+        ignore line: [#include "..." search starts here:]
+        ignore line: [#include <...> search starts here:]
+        ignore line: [ /Applications/Xcode-16.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/include/c++/v1]
+        ignore line: [ /Applications/Xcode-16.2.0.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16/include]
+        ignore line: [ /Applications/Xcode-16.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/include]
+        ignore line: [ /Applications/Xcode-16.2.0.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include]
+        ignore line: [ /Applications/Xcode-16.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/System/Library/Frameworks (framework directory)]
+        ignore line: [End of search list.]
+        ignore line: [[2/2] : && /usr/bin/clang++ -arch arm64 -isysroot /Applications/Xcode-16.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk -Wl -search_paths_first -Wl -headerpad_max_install_names  -v -Wl -v CMakeFiles/cmTC_42d67.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_42d67   && :]
+        ignore line: [Apple clang version 16.0.0 (clang-1600.0.26.6)]
+        ignore line: [Target: arm64-apple-darwin24.6.0]
+        ignore line: [Thread model: posix]
+        ignore line: [InstalledDir: /Applications/Xcode-16.2.0.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin]
+        link line: [ "/Applications/Xcode-16.2.0.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld" -demangle -lto_library /Applications/Xcode-16.2.0.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libLTO.dylib -dynamic -arch arm64 -platform_version macos 15.0.0 15.2 -syslibroot /Applications/Xcode-16.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk -mllvm -enable-linkonceodr-outlining -o cmTC_42d67 -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_42d67.dir/CMakeCXXCompilerABI.cpp.o -lc++ -lSystem /Applications/Xcode-16.2.0.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16/lib/darwin/libclang_rt.osx.a]
+          arg [/Applications/Xcode-16.2.0.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld] ==> ignore
+          arg [-demangle] ==> ignore
+          arg [-lto_library] ==> ignore, skip following value
+          arg [/Applications/Xcode-16.2.0.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libLTO.dylib] ==> skip value of -lto_library
+          arg [-dynamic] ==> ignore
+          arg [-arch] ==> ignore
+          arg [arm64] ==> ignore
+          arg [-platform_version] ==> ignore
+          arg [macos] ==> ignore
+          arg [15.0.0] ==> ignore
+          arg [15.2] ==> ignore
+          arg [-syslibroot] ==> ignore
+          arg [/Applications/Xcode-16.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk] ==> ignore
+          arg [-mllvm] ==> ignore
+          arg [-enable-linkonceodr-outlining] ==> ignore
+          arg [-o] ==> ignore
+          arg [cmTC_42d67] ==> ignore
+          arg [-search_paths_first] ==> ignore
+          arg [-headerpad_max_install_names] ==> ignore
+          arg [-v] ==> ignore
+          arg [CMakeFiles/cmTC_42d67.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+          arg [-lc++] ==> lib [c++]
+          arg [-lSystem] ==> lib [System]
+          arg [/Applications/Xcode-16.2.0.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16/lib/darwin/libclang_rt.osx.a] ==> lib [/Applications/Xcode-16.2.0.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16/lib/darwin/libclang_rt.osx.a]
+        linker tool for 'CXX': /Applications/Xcode-16.2.0.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld
+        Library search paths: [;/Applications/Xcode-16.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/lib;/Applications/Xcode-16.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/lib/swift]
+        Framework search paths: [;/Applications/Xcode-16.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/System/Library/Frameworks]
+        remove lib [System]
+        remove lib [/Applications/Xcode-16.2.0.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16/lib/darwin/libclang_rt.osx.a]
+        collapse library dir [/Applications/Xcode-16.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/lib] ==> [/Applications/Xcode-16.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/lib]
+        collapse library dir [/Applications/Xcode-16.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/lib/swift] ==> [/Applications/Xcode-16.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/lib/swift]
+        collapse framework dir [/Applications/Xcode-16.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/System/Library/Frameworks] ==> [/Applications/Xcode-16.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/System/Library/Frameworks]
+        implicit libs: [c++]
+        implicit objs: []
+        implicit dirs: [/Applications/Xcode-16.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/lib;/Applications/Xcode-16.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/lib/swift]
+        implicit fwks: [/Applications/Xcode-16.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/System/Library/Frameworks]
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/Internal/CMakeDetermineLinkerId.cmake:36 (message)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:299 (cmake_determine_linker_id)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Running the CXX compiler's linker: "/Applications/Xcode-16.2.0.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld" "-v"
+      @(#)PROGRAM:ld PROJECT:ld-1115.7.3
+      BUILD 23:52:02 Dec  5 2024
+      configured to support archs: armv6 armv7 armv7s arm64 arm64e arm64_32 i386 x86_64 x86_64h armv6m armv7k armv7m armv7em
+      will use ld-classic for: armv6 armv7 armv7s i386 armv6m armv7k armv7m armv7em
+      LTO support using: LLVM version 16.0.0 (static support for 29, runtime is 29)
+      TAPI support using: Apple TAPI version 16.0.0 (tapi-1600.0.11.9)
+  -
+    kind: "find_package-v1"
+    backtrace:
+      - "CMakeLists.txt:10 (find_package)"
+    name: "SFML"
+    components:
+      -
+        name: "graphics"
+        required: true
+        found: false
+      -
+        name: "window"
+        required: true
+        found: false
+      -
+        name: "system"
+        required: true
+        found: false
+    configs:
+      -
+        filename: "SFMLConfig.cmake"
+        kind: "cmake"
+      -
+        filename: "sfml-config.cmake"
+        kind: "cmake"
+    version_request:
+      version: "2.6"
+      version_complete: "2.6"
+      exact: false
+    settings:
+      required: "required_explicit"
+      quiet: false
+      global: false
+      policy_scope: true
+      bypass_provider: false
+      names:
+        - "SFML"
+      path_suffixes:
+        - ""
+      paths:
+        CMAKE_FIND_USE_CMAKE_PATH: true
+        CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+        CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+        CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+        CMAKE_FIND_USE_INSTALL_PREFIX: true
+        CMAKE_FIND_USE_PACKAGE_ROOT_PATH: true
+        CMAKE_FIND_USE_CMAKE_PACKAGE_REGISTRY: true
+        CMAKE_FIND_USE_SYSTEM_PACKAGE_REGISTRY: true
+        CMAKE_FIND_ROOT_PATH_MODE: "BOTH"
+    candidates:
+      -
+        path: "/Users/shvydkiy/Documents/Code/cpp/modern-graphics-engine/build/CMakeFiles/pkgRedirects/SFMLConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/Users/shvydkiy/Documents/Code/cpp/modern-graphics-engine/build/CMakeFiles/pkgRedirects/sfml-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/Users/shvydkiy/.ya/tools/v4/8427538159/SFMLConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/Users/shvydkiy/.ya/tools/v4/8427538159/sfml-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/Users/shvydkiy/.mobinfra/SFMLConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/Users/shvydkiy/.mobinfra/sfml-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/Users/shvydkiy/.pub-cache/SFMLConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/Users/shvydkiy/.pub-cache/sfml-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/Users/shvydkiy/.mobinfra/fvm/SFMLConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/Users/shvydkiy/.mobinfra/fvm/sfml-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/Users/shvydkiy/.rbenv/shims/SFMLConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/Users/shvydkiy/.rbenv/shims/sfml-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/Users/shvydkiy/Library/Android/sdk/cmdline-tools/10.0/SFMLConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/Users/shvydkiy/Library/Android/sdk/cmdline-tools/10.0/sfml-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/Users/shvydkiy/Library/Android/sdk/platform-tools/SFMLConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/Users/shvydkiy/Library/Android/sdk/platform-tools/sfml-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/opt/homebrew/SFMLConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/opt/homebrew/sfml-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/opt/homebrew/lib/cmake/SFML/SFMLConfig.cmake"
+        mode: "config"
+        reason: "insufficient_version"
+      -
+        path: "/opt/homebrew/lib/cmake/SFML/sfml-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/Users/shvydkiy/yandex-cloud/SFMLConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/Users/shvydkiy/yandex-cloud/sfml-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/local/SFMLConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/local/sfml-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/System/Cryptexes/App/usr/SFMLConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/System/Cryptexes/App/usr/sfml-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/SFMLConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/sfml-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/SFMLConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/sfml-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/Library/Apple/usr/SFMLConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/Library/Apple/usr/sfml-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/local/munki/SFMLConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/local/munki/sfml-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/Applications/Xcode-16.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/SFMLConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/Applications/Xcode-16.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/sfml-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/opt/SFMLConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/opt/sfml-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/Applications/Xcode-16.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/System/Library/Frameworks/SFMLConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/Applications/Xcode-16.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/System/Library/Frameworks/sfml-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/Applications/Xcode-16.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/SFMLConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/Applications/Xcode-16.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/sfml-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/Applications/Xcode-16.2.0.app/Contents/Developer/Library/Frameworks/SFMLConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/Applications/Xcode-16.2.0.app/Contents/Developer/Library/Frameworks/sfml-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/Library/Frameworks/SFMLConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/Library/Frameworks/sfml-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/System/Library/Frameworks/SFMLConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/System/Library/Frameworks/sfml-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/Users/shvydkiy/Applications/SFMLConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/Users/shvydkiy/Applications/sfml-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/Applications/SFMLConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/Applications/sfml-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/Applications/Xcode-16.2.0.app/Contents/Applications/SFMLConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/Applications/Xcode-16.2.0.app/Contents/Applications/sfml-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/Applications/Xcode-16.2.0.app/Contents/Developer/Applications/SFMLConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/Applications/Xcode-16.2.0.app/Contents/Developer/Applications/sfml-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+    found: null
+    search_context:
+      ENV{PATH}:
+        - "/Users/shvydkiy/.ya/tools/v4/8427538159/bin"
+        - "/Users/shvydkiy/.ya/tools/v4/8427538159/bin"
+        - "/Users/shvydkiy/.mobinfra"
+        - "/Users/shvydkiy/.mobinfra"
+        - "/Users/shvydkiy/.pub-cache/bin"
+        - "/Users/shvydkiy/.mobinfra/fvm"
+        - "/Users/shvydkiy/.rbenv/shims"
+        - "/Users/shvydkiy/Library/Android/sdk/cmdline-tools/10.0/bin"
+        - "/Users/shvydkiy/Library/Android/sdk/platform-tools"
+        - "/Users/shvydkiy/Library/Python/3.13/bin/"
+        - "/opt/homebrew/bin"
+        - "/Users/shvydkiy/yandex-cloud/bin"
+        - "/Users/shvydkiy/.mobinfra"
+        - "/Users/shvydkiy/.mobinfra"
+        - "/Users/shvydkiy/.pub-cache/bin"
+        - "/Users/shvydkiy/.mobinfra/fvm"
+        - "/Users/shvydkiy/.rbenv/shims"
+        - "/Users/shvydkiy/Library/Android/sdk/cmdline-tools/10.0/bin"
+        - "/Users/shvydkiy/Library/Android/sdk/platform-tools"
+        - "/Users/shvydkiy/Library/Python/3.13/bin/"
+        - "/opt/homebrew/bin"
+        - "/opt/homebrew/bin"
+        - "/opt/homebrew/sbin"
+        - "/usr/local/bin"
+        - "/System/Cryptexes/App/usr/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
+        - "/Library/Apple/usr/bin"
+        - "/usr/local/munki"
+        - "/Users/shvydkiy/.mobinfra"
+        - "/Users/shvydkiy/.pub-cache/bin"
+        - "/Users/shvydkiy/.mobinfra/fvm"
+        - "/Users/shvydkiy/.rbenv/shims"
+        - "/Users/shvydkiy/Library/Android/sdk/cmdline-tools/10.0/bin"
+        - "/Users/shvydkiy/Library/Android/sdk/platform-tools"
+        - "/Users/shvydkiy/Library/Python/3.13/bin/"
+        - "/Users/shvydkiy/yandex-cloud/bin"
+        - "/Users/shvydkiy/Library/Application"
+      CMAKE_INSTALL_PREFIX: "/usr/local"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "/Applications/Xcode-16.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr"
+        - "/opt/homebrew"
+        - "/usr/local"
+        - "/usr"
+        - "/"
+        - "/opt/homebrew"
+        - "/usr/local"
+        - "/usr/X11R6"
+        - "/usr/pkg"
+        - "/opt"
+        - "/sw"
+        - "/opt/local"
+      CMAKE_SYSTEM_FRAMEWORK_PATH:
+        - "~/Library/Frameworks"
+        - "/Applications/Xcode-16.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/Library/Frameworks"
+        - "/Applications/Xcode-16.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/Network/Library/Frameworks"
+        - "/Applications/Xcode-16.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/System/Library/Frameworks"
+        - "/Applications/Xcode-16.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks"
+        - "/Applications/Xcode-16.2.0.app/Contents/Developer/Library/Frameworks"
+        - "/Library/Frameworks"
+        - "/Network/Library/Frameworks"
+        - "/System/Library/Frameworks"
+...
+
+---
+events:
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/homebrew/lib/cmake/SFML/SFMLConfig.cmake:93 (find_path)"
+      - "CMakeLists.txt:10 (find_package)"
+    mode: "path"
+    variable: "SFML_DOC_DIR"
+    description: "Path to a file."
+    settings:
+      SearchFramework: "FIRST"
+      SearchAppBundle: "FIRST"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "SFML.tag"
+    candidate_directories:
+      - "/Users/shvydkiy/.ya/tools/v4/8427538159/bin/SFML/doc/"
+      - "/Users/shvydkiy/.ya/tools/v4/8427538159/bin/share/doc/SFML/"
+      - "/Users/shvydkiy/.ya/tools/v4/8427538159/bin/"
+      - "/Users/shvydkiy/.mobinfra/SFML/doc/"
+      - "/Users/shvydkiy/.mobinfra/share/doc/SFML/"
+      - "/Users/shvydkiy/.mobinfra/"
+      - "/Users/shvydkiy/.pub-cache/bin/SFML/doc/"
+      - "/Users/shvydkiy/.pub-cache/bin/share/doc/SFML/"
+      - "/Users/shvydkiy/.pub-cache/bin/"
+      - "/Users/shvydkiy/.mobinfra/fvm/SFML/doc/"
+      - "/Users/shvydkiy/.mobinfra/fvm/share/doc/SFML/"
+      - "/Users/shvydkiy/.mobinfra/fvm/"
+      - "/Users/shvydkiy/.rbenv/shims/SFML/doc/"
+      - "/Users/shvydkiy/.rbenv/shims/share/doc/SFML/"
+      - "/Users/shvydkiy/.rbenv/shims/"
+      - "/Users/shvydkiy/Library/Android/sdk/cmdline-tools/10.0/bin/SFML/doc/"
+      - "/Users/shvydkiy/Library/Android/sdk/cmdline-tools/10.0/bin/share/doc/SFML/"
+      - "/Users/shvydkiy/Library/Android/sdk/cmdline-tools/10.0/bin/"
+      - "/Users/shvydkiy/Library/Android/sdk/platform-tools/SFML/doc/"
+      - "/Users/shvydkiy/Library/Android/sdk/platform-tools/share/doc/SFML/"
+      - "/Users/shvydkiy/Library/Android/sdk/platform-tools/"
+      - "/Users/shvydkiy/Library/Python/3.13/bin/SFML/doc/"
+      - "/Users/shvydkiy/Library/Python/3.13/bin/share/doc/SFML/"
+      - "/Users/shvydkiy/Library/Python/3.13/bin/"
+      - "/opt/homebrew/bin/SFML/doc/"
+      - "/opt/homebrew/bin/share/doc/SFML/"
+      - "/opt/homebrew/bin/"
+      - "/Users/shvydkiy/yandex-cloud/bin/SFML/doc/"
+      - "/Users/shvydkiy/yandex-cloud/bin/share/doc/SFML/"
+      - "/Users/shvydkiy/yandex-cloud/bin/"
+      - "/opt/homebrew/sbin/SFML/doc/"
+      - "/opt/homebrew/sbin/share/doc/SFML/"
+      - "/opt/homebrew/sbin/"
+      - "/usr/local/bin/SFML/doc/"
+      - "/usr/local/bin/share/doc/SFML/"
+      - "/usr/local/bin/"
+      - "/System/Cryptexes/App/usr/bin/SFML/doc/"
+      - "/System/Cryptexes/App/usr/bin/share/doc/SFML/"
+      - "/System/Cryptexes/App/usr/bin/"
+      - "/usr/bin/SFML/doc/"
+      - "/usr/bin/share/doc/SFML/"
+      - "/usr/bin/"
+      - "/bin/SFML/doc/"
+      - "/bin/share/doc/SFML/"
+      - "/bin/"
+      - "/usr/sbin/SFML/doc/"
+      - "/usr/sbin/share/doc/SFML/"
+      - "/usr/sbin/"
+      - "/sbin/SFML/doc/"
+      - "/sbin/share/doc/SFML/"
+      - "/sbin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/SFML/doc/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/share/doc/SFML/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/SFML/doc/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/share/doc/SFML/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/SFML/doc/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/share/doc/SFML/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
+      - "/Library/Apple/usr/bin/SFML/doc/"
+      - "/Library/Apple/usr/bin/share/doc/SFML/"
+      - "/Library/Apple/usr/bin/"
+      - "/usr/local/munki/SFML/doc/"
+      - "/usr/local/munki/share/doc/SFML/"
+      - "/usr/local/munki/"
+      - "/Users/shvydkiy/Library/Application/SFML/doc/"
+      - "/Users/shvydkiy/Library/Application/share/doc/SFML/"
+      - "/Users/shvydkiy/Library/Application/"
+      - "/Applications/Xcode-16.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/include/SFML/doc/"
+      - "/Applications/Xcode-16.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/include/share/doc/SFML/"
+      - "/Applications/Xcode-16.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/include/"
+      - "/Applications/Xcode-16.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/SFML/doc/"
+      - "/Applications/Xcode-16.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/share/doc/SFML/"
+      - "/Applications/Xcode-16.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/"
+      - "/opt/homebrew/include/SFML/doc/"
+      - "/opt/homebrew/include/share/doc/SFML/"
+      - "/opt/homebrew/include/"
+      - "/opt/homebrew/SFML/doc/"
+      - "/opt/homebrew/share/doc/SFML/"
+      - "/opt/homebrew/"
+      - "/usr/local/include/SFML/doc/"
+      - "/usr/local/include/share/doc/SFML/"
+      - "/usr/local/include/"
+      - "/usr/local/SFML/doc/"
+      - "/usr/local/share/doc/SFML/"
+      - "/usr/local/"
+      - "/usr/include/SFML/doc/"
+      - "/usr/include/share/doc/SFML/"
+      - "/usr/include/"
+      - "/usr/SFML/doc/"
+      - "/usr/share/doc/SFML/"
+      - "/usr/"
+      - "/include/SFML/doc/"
+      - "/include/share/doc/SFML/"
+      - "/include/"
+      - "/usr/X11R6/include/SFML/doc/"
+      - "/usr/X11R6/include/share/doc/SFML/"
+      - "/usr/X11R6/include/"
+      - "/usr/X11R6/SFML/doc/"
+      - "/usr/X11R6/share/doc/SFML/"
+      - "/usr/X11R6/"
+      - "/usr/pkg/include/SFML/doc/"
+      - "/usr/pkg/include/share/doc/SFML/"
+      - "/usr/pkg/include/"
+      - "/usr/pkg/SFML/doc/"
+      - "/usr/pkg/share/doc/SFML/"
+      - "/usr/pkg/"
+      - "/opt/include/SFML/doc/"
+      - "/opt/include/share/doc/SFML/"
+      - "/opt/include/"
+      - "/opt/SFML/doc/"
+      - "/opt/share/doc/SFML/"
+      - "/opt/"
+      - "/sw/include/SFML/doc/"
+      - "/sw/include/share/doc/SFML/"
+      - "/sw/include/"
+      - "/sw/SFML/doc/"
+      - "/sw/share/doc/SFML/"
+      - "/sw/"
+      - "/opt/local/include/SFML/doc/"
+      - "/opt/local/include/share/doc/SFML/"
+      - "/opt/local/include/"
+      - "/opt/local/SFML/doc/"
+      - "/opt/local/share/doc/SFML/"
+      - "/opt/local/"
+      - "/usr/include/X11/SFML/doc/"
+      - "/usr/include/X11/share/doc/SFML/"
+      - "/usr/include/X11/"
+      - "/Users/shvydkiy/Library/Frameworks/SFML/doc/"
+      - "/Users/shvydkiy/Library/Frameworks/share/doc/SFML/"
+      - "/Users/shvydkiy/Library/Frameworks/"
+      - "/Applications/Xcode-16.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/Library/Frameworks/SFML/doc/"
+      - "/Applications/Xcode-16.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/Library/Frameworks/share/doc/SFML/"
+      - "/Applications/Xcode-16.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/Library/Frameworks/"
+      - "/Applications/Xcode-16.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/Network/Library/Frameworks/SFML/doc/"
+      - "/Applications/Xcode-16.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/Network/Library/Frameworks/share/doc/SFML/"
+      - "/Applications/Xcode-16.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/Network/Library/Frameworks/"
+      - "/Applications/Xcode-16.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/System/Library/Frameworks/SFML/doc/"
+      - "/Applications/Xcode-16.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/System/Library/Frameworks/share/doc/SFML/"
+      - "/Applications/Xcode-16.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/System/Library/Frameworks/"
+      - "/Applications/Xcode-16.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/SFML/doc/"
+      - "/Applications/Xcode-16.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/share/doc/SFML/"
+      - "/Applications/Xcode-16.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/"
+      - "/Applications/Xcode-16.2.0.app/Contents/Developer/Library/Frameworks/SFML/doc/"
+      - "/Applications/Xcode-16.2.0.app/Contents/Developer/Library/Frameworks/share/doc/SFML/"
+      - "/Applications/Xcode-16.2.0.app/Contents/Developer/Library/Frameworks/"
+      - "/Library/Frameworks/SFML/doc/"
+      - "/Library/Frameworks/share/doc/SFML/"
+      - "/Library/Frameworks/"
+      - "/Network/Library/Frameworks/SFML/doc/"
+      - "/Network/Library/Frameworks/share/doc/SFML/"
+      - "/Network/Library/Frameworks/"
+      - "/System/Library/Frameworks/SFML/doc/"
+      - "/System/Library/Frameworks/share/doc/SFML/"
+      - "/System/Library/Frameworks/"
+      - "/opt/homebrew/SFML/doc/"
+      - "/opt/homebrew/share/doc/SFML/"
+      - "/opt/homebrew/"
+      - "/usr/local/SFML/doc/"
+      - "/usr/local/share/doc/SFML/"
+      - "/usr/local/"
+      - "/usr/SFML/doc/"
+      - "/usr/share/doc/SFML/"
+      - "/usr/"
+      - "/sw/SFML/doc/"
+      - "/sw/share/doc/SFML/"
+      - "/sw/"
+      - "/opt/local/SFML/doc/"
+      - "/opt/local/share/doc/SFML/"
+      - "/opt/local/"
+      - "/opt/csw/SFML/doc/"
+      - "/opt/csw/share/doc/SFML/"
+      - "/opt/csw/"
+      - "/opt/SFML/doc/"
+      - "/opt/share/doc/SFML/"
+      - "/opt/"
+    searched_directories:
+      - "/Users/shvydkiy/.ya/tools/v4/8427538159/bin/SFML/doc/SFML.tag"
+      - "/Users/shvydkiy/.ya/tools/v4/8427538159/bin/share/doc/SFML/SFML.tag"
+      - "/Users/shvydkiy/.ya/tools/v4/8427538159/bin/SFML.tag"
+      - "/Users/shvydkiy/.mobinfra/SFML/doc/SFML.tag"
+      - "/Users/shvydkiy/.mobinfra/share/doc/SFML/SFML.tag"
+      - "/Users/shvydkiy/.mobinfra/SFML.tag"
+      - "/Users/shvydkiy/.pub-cache/bin/SFML/doc/SFML.tag"
+      - "/Users/shvydkiy/.pub-cache/bin/share/doc/SFML/SFML.tag"
+      - "/Users/shvydkiy/.pub-cache/bin/SFML.tag"
+      - "/Users/shvydkiy/.mobinfra/fvm/SFML/doc/SFML.tag"
+      - "/Users/shvydkiy/.mobinfra/fvm/share/doc/SFML/SFML.tag"
+      - "/Users/shvydkiy/.mobinfra/fvm/SFML.tag"
+      - "/Users/shvydkiy/.rbenv/shims/SFML/doc/SFML.tag"
+      - "/Users/shvydkiy/.rbenv/shims/share/doc/SFML/SFML.tag"
+      - "/Users/shvydkiy/.rbenv/shims/SFML.tag"
+      - "/Users/shvydkiy/Library/Android/sdk/cmdline-tools/10.0/bin/SFML/doc/SFML.tag"
+      - "/Users/shvydkiy/Library/Android/sdk/cmdline-tools/10.0/bin/share/doc/SFML/SFML.tag"
+      - "/Users/shvydkiy/Library/Android/sdk/cmdline-tools/10.0/bin/SFML.tag"
+      - "/Users/shvydkiy/Library/Android/sdk/platform-tools/SFML/doc/SFML.tag"
+      - "/Users/shvydkiy/Library/Android/sdk/platform-tools/share/doc/SFML/SFML.tag"
+      - "/Users/shvydkiy/Library/Android/sdk/platform-tools/SFML.tag"
+      - "/Users/shvydkiy/Library/Python/3.13/bin/SFML/doc/SFML.tag"
+      - "/Users/shvydkiy/Library/Python/3.13/bin/share/doc/SFML/SFML.tag"
+      - "/Users/shvydkiy/Library/Python/3.13/bin/SFML.tag"
+      - "/opt/homebrew/bin/SFML/doc/SFML.tag"
+      - "/opt/homebrew/bin/share/doc/SFML/SFML.tag"
+      - "/opt/homebrew/bin/SFML.tag"
+      - "/Users/shvydkiy/yandex-cloud/bin/SFML/doc/SFML.tag"
+      - "/Users/shvydkiy/yandex-cloud/bin/share/doc/SFML/SFML.tag"
+      - "/Users/shvydkiy/yandex-cloud/bin/SFML.tag"
+      - "/opt/homebrew/sbin/SFML/doc/SFML.tag"
+      - "/opt/homebrew/sbin/share/doc/SFML/SFML.tag"
+      - "/opt/homebrew/sbin/SFML.tag"
+      - "/usr/local/bin/SFML/doc/SFML.tag"
+      - "/usr/local/bin/share/doc/SFML/SFML.tag"
+      - "/usr/local/bin/SFML.tag"
+      - "/System/Cryptexes/App/usr/bin/SFML/doc/SFML.tag"
+      - "/System/Cryptexes/App/usr/bin/share/doc/SFML/SFML.tag"
+      - "/System/Cryptexes/App/usr/bin/SFML.tag"
+      - "/usr/bin/SFML/doc/SFML.tag"
+      - "/usr/bin/share/doc/SFML/SFML.tag"
+      - "/usr/bin/SFML.tag"
+      - "/bin/SFML/doc/SFML.tag"
+      - "/bin/share/doc/SFML/SFML.tag"
+      - "/bin/SFML.tag"
+      - "/usr/sbin/SFML/doc/SFML.tag"
+      - "/usr/sbin/share/doc/SFML/SFML.tag"
+      - "/usr/sbin/SFML.tag"
+      - "/sbin/SFML/doc/SFML.tag"
+      - "/sbin/share/doc/SFML/SFML.tag"
+      - "/sbin/SFML.tag"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/SFML/doc/SFML.tag"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/share/doc/SFML/SFML.tag"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/SFML.tag"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/SFML/doc/SFML.tag"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/share/doc/SFML/SFML.tag"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/SFML.tag"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/SFML/doc/SFML.tag"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/share/doc/SFML/SFML.tag"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/SFML.tag"
+      - "/Library/Apple/usr/bin/SFML/doc/SFML.tag"
+      - "/Library/Apple/usr/bin/share/doc/SFML/SFML.tag"
+      - "/Library/Apple/usr/bin/SFML.tag"
+      - "/usr/local/munki/SFML/doc/SFML.tag"
+      - "/usr/local/munki/share/doc/SFML/SFML.tag"
+      - "/usr/local/munki/SFML.tag"
+      - "/Users/shvydkiy/Library/Application/SFML/doc/SFML.tag"
+      - "/Users/shvydkiy/Library/Application/share/doc/SFML/SFML.tag"
+      - "/Users/shvydkiy/Library/Application/SFML.tag"
+      - "/Applications/Xcode-16.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/include/SFML/doc/SFML.tag"
+      - "/Applications/Xcode-16.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/include/share/doc/SFML/SFML.tag"
+      - "/Applications/Xcode-16.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/include/SFML.tag"
+      - "/Applications/Xcode-16.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/SFML/doc/SFML.tag"
+      - "/Applications/Xcode-16.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/share/doc/SFML/SFML.tag"
+      - "/Applications/Xcode-16.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/SFML.tag"
+      - "/opt/homebrew/include/SFML/doc/SFML.tag"
+      - "/opt/homebrew/include/share/doc/SFML/SFML.tag"
+      - "/opt/homebrew/include/SFML.tag"
+      - "/opt/homebrew/SFML/doc/SFML.tag"
+    found: "/opt/homebrew/share/doc/SFML/"
+    search_context:
+      ENV{PATH}:
+        - "/Users/shvydkiy/.ya/tools/v4/8427538159/bin"
+        - "/Users/shvydkiy/.ya/tools/v4/8427538159/bin"
+        - "/Users/shvydkiy/.mobinfra"
+        - "/Users/shvydkiy/.mobinfra"
+        - "/Users/shvydkiy/.pub-cache/bin"
+        - "/Users/shvydkiy/.mobinfra/fvm"
+        - "/Users/shvydkiy/.rbenv/shims"
+        - "/Users/shvydkiy/Library/Android/sdk/cmdline-tools/10.0/bin"
+        - "/Users/shvydkiy/Library/Android/sdk/platform-tools"
+        - "/Users/shvydkiy/Library/Python/3.13/bin/"
+        - "/opt/homebrew/bin"
+        - "/Users/shvydkiy/yandex-cloud/bin"
+        - "/Users/shvydkiy/.mobinfra"
+        - "/Users/shvydkiy/.mobinfra"
+        - "/Users/shvydkiy/.pub-cache/bin"
+        - "/Users/shvydkiy/.mobinfra/fvm"
+        - "/Users/shvydkiy/.rbenv/shims"
+        - "/Users/shvydkiy/Library/Android/sdk/cmdline-tools/10.0/bin"
+        - "/Users/shvydkiy/Library/Android/sdk/platform-tools"
+        - "/Users/shvydkiy/Library/Python/3.13/bin/"
+        - "/opt/homebrew/bin"
+        - "/opt/homebrew/bin"
+        - "/opt/homebrew/sbin"
+        - "/usr/local/bin"
+        - "/System/Cryptexes/App/usr/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
+        - "/Library/Apple/usr/bin"
+        - "/usr/local/munki"
+        - "/Users/shvydkiy/.mobinfra"
+        - "/Users/shvydkiy/.pub-cache/bin"
+        - "/Users/shvydkiy/.mobinfra/fvm"
+        - "/Users/shvydkiy/.rbenv/shims"
+        - "/Users/shvydkiy/Library/Android/sdk/cmdline-tools/10.0/bin"
+        - "/Users/shvydkiy/Library/Android/sdk/platform-tools"
+        - "/Users/shvydkiy/Library/Python/3.13/bin/"
+        - "/Users/shvydkiy/yandex-cloud/bin"
+        - "/Users/shvydkiy/Library/Application"
+      CMAKE_INSTALL_PREFIX: "/usr/local"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "/Applications/Xcode-16.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr"
+        - "/opt/homebrew"
+        - "/usr/local"
+        - "/usr"
+        - "/"
+        - "/opt/homebrew"
+        - "/usr/local"
+        - "/usr/X11R6"
+        - "/usr/pkg"
+        - "/opt"
+        - "/sw"
+        - "/opt/local"
+      CMAKE_SYSTEM_INCLUDE_PATH:
+        - "/usr/include/X11"
+      CMAKE_SYSTEM_FRAMEWORK_PATH:
+        - "~/Library/Frameworks"
+        - "/Applications/Xcode-16.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/Library/Frameworks"
+        - "/Applications/Xcode-16.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/Network/Library/Frameworks"
+        - "/Applications/Xcode-16.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/System/Library/Frameworks"
+        - "/Applications/Xcode-16.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks"
+        - "/Applications/Xcode-16.2.0.app/Contents/Developer/Library/Frameworks"
+        - "/Library/Frameworks"
+        - "/Network/Library/Frameworks"
+        - "/System/Library/Frameworks"
+...

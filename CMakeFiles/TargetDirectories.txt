@@ -1,0 +1,4 @@
+/Users/shvydkiy/Documents/Code/cpp/modern-graphics-engine/CMakeFiles/engine.dir
+/Users/shvydkiy/Documents/Code/cpp/modern-graphics-engine/CMakeFiles/run.dir
+/Users/shvydkiy/Documents/Code/cpp/modern-graphics-engine/CMakeFiles/edit_cache.dir
+/Users/shvydkiy/Documents/Code/cpp/modern-graphics-engine/CMakeFiles/rebuild_cache.dir
