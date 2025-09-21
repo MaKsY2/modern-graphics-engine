@@ -57,6 +57,14 @@ build CMakeFiles/engine.dir/src/main.cpp.o: CXX_COMPILER__engine_unscanned_Debug
   OBJECT_DIR = CMakeFiles/engine.dir
   OBJECT_FILE_DIR = CMakeFiles/engine.dir/src
 
+build CMakeFiles/engine.dir/src/ik_math/ik_solver.cpp.o: CXX_COMPILER__engine_unscanned_Debug /Users/shvydkiy/Documents/Code/cpp/modern-graphics-engine/src/ik_math/ik_solver.cpp || cmake_object_order_depends_target_engine
+  CONFIG = Debug
+  DEP_FILE = CMakeFiles/engine.dir/src/ik_math/ik_solver.cpp.o.d
+  FLAGS = -g -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode-16.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk
+  INCLUDES = -isystem /opt/homebrew/include
+  OBJECT_DIR = CMakeFiles/engine.dir
+  OBJECT_FILE_DIR = CMakeFiles/engine.dir/src/ik_math
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target engine
@@ -65,7 +73,7 @@ build CMakeFiles/engine.dir/src/main.cpp.o: CXX_COMPILER__engine_unscanned_Debug
 #############################################
 # Link the executable bin/engine
 
-build bin/engine: CXX_EXECUTABLE_LINKER__engine_Debug CMakeFiles/engine.dir/src/main.cpp.o | /opt/homebrew/lib/libsfml-graphics.3.0.2.dylib /opt/homebrew/lib/libsfml-window.3.0.2.dylib /opt/homebrew/lib/libsfml-system.3.0.2.dylib
+build bin/engine: CXX_EXECUTABLE_LINKER__engine_Debug CMakeFiles/engine.dir/src/main.cpp.o CMakeFiles/engine.dir/src/ik_math/ik_solver.cpp.o | /opt/homebrew/lib/libsfml-graphics.3.0.2.dylib /opt/homebrew/lib/libsfml-window.3.0.2.dylib /opt/homebrew/lib/libsfml-system.3.0.2.dylib
   CONFIG = Debug
   FLAGS = -g -arch arm64 -isysroot /Applications/Xcode-16.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk
   LINK_FLAGS = -Wl,-search_paths_first -Wl,-headerpad_max_install_names

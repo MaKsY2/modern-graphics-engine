@@ -4,5 +4,11 @@
   "command": "/usr/bin/clang++ -isystem /opt/homebrew/include -g -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode-16.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk -o CMakeFiles/engine.dir/src/main.cpp.o -c /Users/shvydkiy/Documents/Code/cpp/modern-graphics-engine/src/main.cpp",
   "file": "/Users/shvydkiy/Documents/Code/cpp/modern-graphics-engine/src/main.cpp",
   "output": "/Users/shvydkiy/Documents/Code/cpp/modern-graphics-engine/build/CMakeFiles/engine.dir/src/main.cpp.o"
+},
+{
+  "directory": "/Users/shvydkiy/Documents/Code/cpp/modern-graphics-engine/build",
+  "command": "/usr/bin/clang++ -isystem /opt/homebrew/include -g -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode-16.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk -o CMakeFiles/engine.dir/src/ik_math/ik_solver.cpp.o -c /Users/shvydkiy/Documents/Code/cpp/modern-graphics-engine/src/ik_math/ik_solver.cpp",
+  "file": "/Users/shvydkiy/Documents/Code/cpp/modern-graphics-engine/src/ik_math/ik_solver.cpp",
+  "output": "/Users/shvydkiy/Documents/Code/cpp/modern-graphics-engine/build/CMakeFiles/engine.dir/src/ik_math/ik_solver.cpp.o"
 }
 ]
