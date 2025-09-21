@@ -12,8 +12,6 @@ int main()
 
     while (window.isOpen())
     {
-        // В SFML 3 pollEvent() возвращает std::optional<Event>,
-        // и проверка типа делается через event->is<T>()
         while (auto event = window.pollEvent())
         {
             if (event->is<sf::Event::Closed>())
