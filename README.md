@@ -12,4 +12,4 @@ I dont like web, i would prefer my own graphics engine
 
 TEST VIEW 
 
-[My test of IK Solver](video/recording.mp4)
+[My test of IK Solver](video/recording2.mp4)
