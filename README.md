@@ -10,6 +10,5 @@ I dont like web, i would prefer my own graphics engine
 
 Делаем солвер для 2д, потом поделаем пружинки в 2д, если все работает, то перейдем к 3д ротаторам 
 
-TEST VIEW 
+https://github.com/user-attachments/assets/05c8e385-f0d6-4994-b6ac-0eb10504cb53
 
-[](video/recording2.mp4)
