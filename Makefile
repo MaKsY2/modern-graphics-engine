@@ -117,17 +117,43 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named engine
+# Target rules for targets named glad
 
 # Build rule for target.
-engine: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 engine
-.PHONY : engine
+glad: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 glad
+.PHONY : glad
 
 # fast build rule for target.
-engine/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/engine.dir/build.make CMakeFiles/engine.dir/build
-.PHONY : engine/fast
+glad/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/glad.dir/build.make CMakeFiles/glad.dir/build
+.PHONY : glad/fast
+
+#=============================================================================
+# Target rules for targets named engine_testing
+
+# Build rule for target.
+engine_testing: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 engine_testing
+.PHONY : engine_testing
+
+# fast build rule for target.
+engine_testing/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/engine_testing.dir/build.make CMakeFiles/engine_testing.dir/build
+.PHONY : engine_testing/fast
+
+#=============================================================================
+# Target rules for targets named engine_production
+
+# Build rule for target.
+engine_production: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 engine_production
+.PHONY : engine_production
+
+# fast build rule for target.
+engine_production/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/engine_production.dir/build.make CMakeFiles/engine_production.dir/build
+.PHONY : engine_production/fast
 
 #=============================================================================
 # Target rules for targets named run
@@ -142,53 +168,90 @@ run/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/run.dir/build.make CMakeFiles/run.dir/build
 .PHONY : run/fast
 
-src/ik_math/ik_solver.o: src/ik_math/ik_solver.cpp.o
-.PHONY : src/ik_math/ik_solver.o
+#=============================================================================
+# Target rules for targets named run-testing
+
+# Build rule for target.
+run-testing: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 run-testing
+.PHONY : run-testing
+
+# fast build rule for target.
+run-testing/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/run-testing.dir/build.make CMakeFiles/run-testing.dir/build
+.PHONY : run-testing/fast
+
+src/production/glad/src/glad.o: src/production/glad/src/glad.c.o
+.PHONY : src/production/glad/src/glad.o
 
 # target to build an object file
-src/ik_math/ik_solver.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/engine.dir/build.make CMakeFiles/engine.dir/src/ik_math/ik_solver.cpp.o
-.PHONY : src/ik_math/ik_solver.cpp.o
+src/production/glad/src/glad.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/glad.dir/build.make CMakeFiles/glad.dir/src/production/glad/src/glad.c.o
+.PHONY : src/production/glad/src/glad.c.o
 
-src/ik_math/ik_solver.i: src/ik_math/ik_solver.cpp.i
-.PHONY : src/ik_math/ik_solver.i
+src/production/glad/src/glad.i: src/production/glad/src/glad.c.i
+.PHONY : src/production/glad/src/glad.i
 
 # target to preprocess a source file
-src/ik_math/ik_solver.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/engine.dir/build.make CMakeFiles/engine.dir/src/ik_math/ik_solver.cpp.i
-.PHONY : src/ik_math/ik_solver.cpp.i
+src/production/glad/src/glad.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/glad.dir/build.make CMakeFiles/glad.dir/src/production/glad/src/glad.c.i
+.PHONY : src/production/glad/src/glad.c.i
 
-src/ik_math/ik_solver.s: src/ik_math/ik_solver.cpp.s
-.PHONY : src/ik_math/ik_solver.s
+src/production/glad/src/glad.s: src/production/glad/src/glad.c.s
+.PHONY : src/production/glad/src/glad.s
 
 # target to generate assembly for a file
-src/ik_math/ik_solver.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/engine.dir/build.make CMakeFiles/engine.dir/src/ik_math/ik_solver.cpp.s
-.PHONY : src/ik_math/ik_solver.cpp.s
+src/production/glad/src/glad.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/glad.dir/build.make CMakeFiles/glad.dir/src/production/glad/src/glad.c.s
+.PHONY : src/production/glad/src/glad.c.s
 
-src/main.o: src/main.cpp.o
-.PHONY : src/main.o
+src/production/main.o: src/production/main.cpp.o
+.PHONY : src/production/main.o
 
 # target to build an object file
-src/main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/engine.dir/build.make CMakeFiles/engine.dir/src/main.cpp.o
-.PHONY : src/main.cpp.o
+src/production/main.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/engine_production.dir/build.make CMakeFiles/engine_production.dir/src/production/main.cpp.o
+.PHONY : src/production/main.cpp.o
 
-src/main.i: src/main.cpp.i
-.PHONY : src/main.i
+src/production/main.i: src/production/main.cpp.i
+.PHONY : src/production/main.i
 
 # target to preprocess a source file
-src/main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/engine.dir/build.make CMakeFiles/engine.dir/src/main.cpp.i
-.PHONY : src/main.cpp.i
+src/production/main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/engine_production.dir/build.make CMakeFiles/engine_production.dir/src/production/main.cpp.i
+.PHONY : src/production/main.cpp.i
 
-src/main.s: src/main.cpp.s
-.PHONY : src/main.s
+src/production/main.s: src/production/main.cpp.s
+.PHONY : src/production/main.s
 
 # target to generate assembly for a file
-src/main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/engine.dir/build.make CMakeFiles/engine.dir/src/main.cpp.s
-.PHONY : src/main.cpp.s
+src/production/main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/engine_production.dir/build.make CMakeFiles/engine_production.dir/src/production/main.cpp.s
+.PHONY : src/production/main.cpp.s
+
+src/testing/main.o: src/testing/main.cpp.o
+.PHONY : src/testing/main.o
+
+# target to build an object file
+src/testing/main.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/engine_testing.dir/build.make CMakeFiles/engine_testing.dir/src/testing/main.cpp.o
+.PHONY : src/testing/main.cpp.o
+
+src/testing/main.i: src/testing/main.cpp.i
+.PHONY : src/testing/main.i
+
+# target to preprocess a source file
+src/testing/main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/engine_testing.dir/build.make CMakeFiles/engine_testing.dir/src/testing/main.cpp.i
+.PHONY : src/testing/main.cpp.i
+
+src/testing/main.s: src/testing/main.cpp.s
+.PHONY : src/testing/main.s
+
+# target to generate assembly for a file
+src/testing/main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/engine_testing.dir/build.make CMakeFiles/engine_testing.dir/src/testing/main.cpp.s
+.PHONY : src/testing/main.cpp.s
 
 # Help Target
 help:
@@ -199,13 +262,19 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... run"
-	@echo "... engine"
-	@echo "... src/ik_math/ik_solver.o"
-	@echo "... src/ik_math/ik_solver.i"
-	@echo "... src/ik_math/ik_solver.s"
-	@echo "... src/main.o"
-	@echo "... src/main.i"
-	@echo "... src/main.s"
+	@echo "... run-testing"
+	@echo "... engine_production"
+	@echo "... engine_testing"
+	@echo "... glad"
+	@echo "... src/production/glad/src/glad.o"
+	@echo "... src/production/glad/src/glad.i"
+	@echo "... src/production/glad/src/glad.s"
+	@echo "... src/production/main.o"
+	@echo "... src/production/main.i"
+	@echo "... src/production/main.s"
+	@echo "... src/testing/main.o"
+	@echo "... src/testing/main.i"
+	@echo "... src/testing/main.s"
 .PHONY : help
 
 

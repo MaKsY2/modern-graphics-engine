@@ -45,7 +45,7 @@ static void drawReachCircle(sf::RenderTarget &rt, sf::Vector2f center, float rad
     rt.draw(c);
 }
 
-int main()
+void draw2d()
 {
     sf::ContextSettings settings;
     sf::RenderWindow window(sf::VideoMode{sf::Vector2u{1000u, 700u}}, "IK_Solver FABRIK (SFML 3)");
@@ -122,4 +122,9 @@ int main()
 
         window.display();
     }
+}
+
+int main()
+{
+    draw2d();
 }
