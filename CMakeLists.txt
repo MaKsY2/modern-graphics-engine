@@ -6,52 +6,54 @@ project(MODERN_GRAPHICS_ENGINE
 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
-
-find_package(SFML 3.0.2 REQUIRED COMPONENTS Graphics Window System)
-
-# Добавляем GLAD как статическую библиотеку
-add_library(glad STATIC src/production/glad/src/glad.c)
-target_include_directories(glad PUBLIC src/production/glad/include)
-set_target_properties(glad PROPERTIES LINKER_LANGUAGE C)
-
-add_executable(engine_testing src/testing/main.cpp)
-add_executable(engine_production src/production/main.cpp src/production/utils/shader.hpp)
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 find_package(OpenGL REQUIRED)
 find_package(glfw3 REQUIRED)
 find_package(glm REQUIRED)
 
-# Добавляем include директории для GLAD
-target_include_directories(engine_production PRIVATE src/production/glad/include)
+add_subdirectory(src/libs/glad)
+add_subdirectory(src/utils)
 
-target_link_libraries(engine_testing PRIVATE
-    OpenGL::GL
-    glfw
-    glm::glm)
-target_link_libraries(engine_production PRIVATE
-    OpenGL::GL
-    glfw
-    glad
-    glm::glm)
-
-set_target_properties(engine_testing PROPERTIES
-    RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin_testing
+add_executable(main_app
+    src/main.cpp
 )
 
-set_target_properties(engine_production PROPERTIES
+target_include_directories(main_app PRIVATE
+    src
+)
+
+target_link_libraries(main_app PRIVATE
+    OpenGL::GL
+    glfw
+    glm::glm
+    glad
+    utils
+)
+
+set_target_properties(main_app PROPERTIES
     RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin
 )
 
-add_custom_target(run
-    COMMAND ${CMAKE_BINARY_DIR}/bin/engine_production
-    DEPENDS engine_production
-    WORKING_DIRECTORY ${CMAKE_PROJECT_DIR}
-    COMMENT "Running the engine..."
+add_custom_target(copy_shaders ALL
+    COMMAND ${CMAKE_COMMAND} -E copy_directory
+        ${CMAKE_SOURCE_DIR}/src/shaders
+        ${CMAKE_BINARY_DIR}/bin/shaders
+    COMMENT "Copying shader files..."
 )
 
-add_custom_target(run-testing
-    COMMAND ${CMAKE_BINARY_DIR}/bin_testing/engine_testing
-    DEPENDS engine_testing
-    WORKING_DIRECTORY ${CMAKE_PROJECT_DIR}
-    COMMENT "[TESTING] Running the engine..."
+add_dependencies(main_app copy_shaders)
+
+add_custom_target(run
+    COMMAND ${CMAKE_BINARY_DIR}/bin/main_app
+    DEPENDS main_app
+    WORKING_DIRECTORY ${CMAKE_BINARY_DIR}/bin
+    COMMENT "Running main application..."
 )
+
+message(STATUS "=== Modern Graphics Engine Configuration ===")
+message(STATUS "OpenGL: ${OPENGL_LIBRARIES}")
+message(STATUS "GLFW3: Found")
+message(STATUS "GLM: Found")
+message(STATUS "Build type: ${CMAKE_BUILD_TYPE}")
+message(STATUS "==========================================")
