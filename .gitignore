@@ -48,4 +48,3 @@ CMakeCache.txt
 build/
 bin/
 CMakeFiles/
-src/libs/*
