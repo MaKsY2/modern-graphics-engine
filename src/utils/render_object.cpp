@@ -1,10 +1,12 @@
 #include "render_object.hpp"
 #include "shader.hpp"
 
+#include <memory>
+
 namespace utils
 
 {
-    RenderObject::RenderObject(const std::shared_ptr<Mesh>& mesh, const std::shared_ptr<Shader>& shader) : mesh_(std::move(mesh)), shader_(std::move(shader)) {}
+    RenderObject::RenderObject(const std::shared_ptr<Mesh> &mesh, const std::shared_ptr<Shader> &shader) : mesh_(std::move(mesh)), shader_(std::move(shader)) {}
 
     void RenderObject::draw(const glm::mat4 &viewProj) const
     {

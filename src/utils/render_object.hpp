@@ -5,6 +5,8 @@
 #include "shader.hpp"
 #include "mesh.hpp"
 
+#include <memory>
+
 namespace utils
 {
 

@@ -3,7 +3,6 @@ add_subdirectory(primitives)
 add_library(utils STATIC
     shader.cpp
     opengl_app.cpp
-    object.cpp
     mesh.cpp
     render_object.cpp
     transform.cpp
