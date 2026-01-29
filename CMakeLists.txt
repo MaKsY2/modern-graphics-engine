@@ -28,6 +28,7 @@ target_link_libraries(main_app PRIVATE
     glfw
     glm::glm
     glad
+    primitives
     utils
 )
 

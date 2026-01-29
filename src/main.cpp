@@ -5,6 +5,9 @@
 #include <glm/gtc/type_ptr.hpp>
 
 #include "utils/shader.hpp"
+#include "utils/render_object.hpp"
+#include "utils/primitives/sphere.hpp"
+#include "utils/primitives/cube.hpp"
 
 #include <iostream>
 #include <vector>
@@ -12,30 +15,6 @@
 
 #define LOG(msg) std::cout << "[INFO] " << msg << std::endl
 #define LOG_ERROR(msg) std::cerr << "[ERROR] " << msg << std::endl
-
-struct Vertex
-{
-    glm::vec3 pos;
-    glm::vec3 color;
-};
-
-const std::vector<Vertex> cubeVertices = {
-    {{-0.5f, -0.5f, -0.5f}, {1.0f, 0.0f, 0.0f}},
-    {{0.5f, -0.5f, -0.5f}, {0.0f, 1.0f, 0.0f}},
-    {{0.5f, 0.5f, -0.5f}, {0.0f, 0.0f, 1.0f}},
-    {{-0.5f, 0.5f, -0.5f}, {1.0f, 1.0f, 0.0f}},
-    {{-0.5f, -0.5f, 0.5f}, {1.0f, 0.0f, 1.0f}},
-    {{0.5f, -0.5f, 0.5f}, {0.0f, 1.0f, 1.0f}},
-    {{0.5f, 0.5f, 0.5f}, {1.0f, 1.0f, 1.0f}},
-    {{-0.5f, 0.5f, 0.5f}, {0.5f, 0.5f, 0.5f}}};
-
-const std::vector<unsigned int> cubeIndices = {
-    0, 1, 2, 2, 3, 0,
-    1, 5, 6, 6, 2, 1,
-    5, 4, 7, 7, 6, 5,
-    4, 0, 3, 3, 7, 4,
-    3, 2, 6, 6, 7, 3,
-    4, 5, 1, 1, 0, 4};
 
 class OpenGLCubeApp
 {
@@ -50,8 +29,7 @@ public:
 
 private:
     GLFWwindow *window;
-    Shader *shader;
-    GLuint VAO, VBO, EBO;
+    std::shared_ptr<Shader> shader;
 
     glm::vec3 cameraPos = glm::vec3(2.0f, 2.0f, 2.0f);
     float cameraYaw = -45.0f;
@@ -100,27 +78,7 @@ private:
         LOG("OpenGL Version: " << glGetString(GL_VERSION));
         LOG("GLSL Version: " << glGetString(GL_SHADING_LANGUAGE_VERSION));
 
-        shader = new Shader("shaders/cube_gl.vert", "shaders/cube_gl.frag");
-
-        glGenVertexArrays(1, &VAO);
-        glGenBuffers(1, &VBO);
-        glGenBuffers(1, &EBO);
-
-        glBindVertexArray(VAO);
-
-        glBindBuffer(GL_ARRAY_BUFFER, VBO);
-        glBufferData(GL_ARRAY_BUFFER, cubeVertices.size() * sizeof(Vertex), cubeVertices.data(), GL_STATIC_DRAW);
-
-        glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, EBO);
-        glBufferData(GL_ELEMENT_ARRAY_BUFFER, cubeIndices.size() * sizeof(unsigned int), cubeIndices.data(), GL_STATIC_DRAW);
-
-        glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, sizeof(Vertex), (void *)offsetof(Vertex, pos));
-        glEnableVertexAttribArray(0);
-
-        glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, sizeof(Vertex), (void *)offsetof(Vertex, color));
-        glEnableVertexAttribArray(1);
-
-        glBindVertexArray(0);
+        shader = std::make_shared<Shader>("shaders/vert.vert", "shaders/frag.frag");
 
         glEnable(GL_DEPTH_TEST);
 
@@ -132,9 +90,9 @@ private:
         LOG("Entering main loop...");
         LOG("Camera position: (" << cameraPos.x << ", " << cameraPos.y << ", " << cameraPos.z << ")");
 
-        glfwSetKeyCallback(window, [](GLFWwindow *window, int key, int scancode, int action, int mods)
+        glfwSetKeyCallback(window, [](GLFWwindow *win, int key, int scancode, int action, int mods)
                            {
-            auto app = reinterpret_cast<OpenGLCubeApp*>(glfwGetWindowUserPointer(window));
+            auto app = reinterpret_cast<OpenGLCubeApp*>(glfwGetWindowUserPointer(win));
             if (action == GLFW_PRESS || action == GLFW_REPEAT) {
                 float speed = 0.1f;
                 glm::vec3 forward;
@@ -148,15 +106,15 @@ private:
                 if (key == GLFW_KEY_S) app->cameraPos -= forward * speed;
                 if (key == GLFW_KEY_A) app->cameraPos -= right * speed;
                 if (key == GLFW_KEY_D) app->cameraPos += right * speed;
-                if (key == GLFW_KEY_ESCAPE) glfwSetWindowShouldClose(window, true);
+                if (key == GLFW_KEY_ESCAPE) glfwSetWindowShouldClose(win, true);
             } });
 
-        glfwSetCursorPosCallback(window, [](GLFWwindow *window, double xpos, double ypos)
+        glfwSetCursorPosCallback(window, [](GLFWwindow *win, double xpos, double ypos)
                                  {
             static double lastX = 640, lastY = 400;
             static bool firstMouse = true;
             
-            if (glfwGetMouseButton(window, GLFW_MOUSE_BUTTON_RIGHT) == GLFW_PRESS) {
+            if (glfwGetMouseButton(win, GLFW_MOUSE_BUTTON_RIGHT) == GLFW_PRESS) {
                 if (firstMouse) {
                     lastX = xpos;
                     lastY = ypos;
@@ -168,7 +126,9 @@ private:
                 lastX = xpos;
                 lastY = ypos;
                 
-                auto app = reinterpret_cast<OpenGLCubeApp*>(glfwGetWindowUserPointer(window));
+
+                // это пиздец с reinterpret_cast, но работает 
+                auto app = reinterpret_cast<OpenGLCubeApp*>(glfwGetWindowUserPointer(win));
                 app->cameraYaw += xoffset * 0.1f;
                 app->cameraPitch += yoffset * 0.1f;
                 
@@ -185,6 +145,20 @@ private:
 
         auto startTime = std::chrono::high_resolution_clock::now();
 
+        std::vector<std::unique_ptr<utils::RenderObject>> scene;
+
+        auto sphere1 = std::make_unique<primitives::Sphere>(1.0f, 64, 128, shader);
+        sphere1->transform.position = {0, 0, 0};
+        sphere1->transform.dirty = true;
+        sphere1->color = {1, 1, 0, 1};
+        scene.push_back(std::move(sphere1));
+
+        auto cube1 = std::make_unique<primitives::Cube>(glm::vec3(1.0f, 1.0f, 1.0f), shader);
+        cube1->transform.position = {2, 0, 0};
+        cube1->transform.dirty = true;
+        cube1->color = {1, 0, 0, 1};
+        scene.push_back(std::move(cube1));
+
         while (!glfwWindowShouldClose(window))
         {
             glfwPollEvents();
@@ -197,18 +171,22 @@ private:
 
             shader->use();
 
-            glm::mat4 model = glm::rotate(glm::mat4(1.0f), time * glm::radians(45.0f), glm::vec3(0.0f, 1.0f, 0.0f));
             glm::vec3 cubeCenter(0.0f, 0.0f, 0.0f);
             glm::mat4 view = glm::lookAt(cameraPos, cubeCenter, glm::vec3(0.0f, 1.0f, 0.0f));
             glm::mat4 proj = glm::perspective(glm::radians(45.0f), (float)WIDTH / (float)HEIGHT, 0.1f, 100.0f);
 
-            shader->setMat4("model", model);
             shader->setMat4("view", view);
             shader->setMat4("proj", proj);
 
-            glBindVertexArray(VAO);
-            glDrawElements(GL_TRIANGLES, cubeIndices.size(), GL_UNSIGNED_INT, 0);
-            glBindVertexArray(0);
+            float angle = time * glm::radians(3.0f);
+
+            for (auto &obj : scene)
+            {
+                obj->transform.rotation = glm::angleAxis(angle, glm::vec3(0, 1, 0));
+                obj->transform.dirty = true;
+
+                obj->draw(proj * view);
+            }
 
             glfwSwapBuffers(window);
         }
@@ -219,10 +197,7 @@ private:
     void cleanup()
     {
         LOG("Cleaning up...");
-        glDeleteVertexArrays(1, &VAO);
-        glDeleteBuffers(1, &VBO);
-        glDeleteBuffers(1, &EBO);
-        delete shader;
+        shader.reset();
         glfwDestroyWindow(window);
         glfwTerminate();
         LOG("Cleanup complete");

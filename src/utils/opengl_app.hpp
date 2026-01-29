@@ -10,11 +10,10 @@ namespace engine
     class OpenGLApp
     {
     private:
-        static const size_t WIDTH = 1280;
-        static const size_t HEIGHT = 800;
+        static const uint32_t WIDTH = 1280;
+        static const uint32_t HEIGHT = 800;
         GLFWwindow *window_;
         Shader *shader_;
-
 
         void init_window();
         void init_opengl();
