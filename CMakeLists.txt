@@ -1,25 +1,60 @@
 cmake_minimum_required(VERSION 3.16)
 
-project(MODERN_GRAPHICS_ENGINE 
+project(MODERN_GRAPHICS_ENGINE
     VERSION 1.0.0
-    LANGUAGES CXX)
+    LANGUAGES CXX C)
 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
-find_package(SFML 3.0.2 REQUIRED COMPONENTS Graphics Window System)
+find_package(OpenGL REQUIRED)
+find_package(glfw3 REQUIRED)
+find_package(glm REQUIRED)
 
-add_executable(engine src/main.cpp src/ik_math/ik_solver.cpp)
+add_subdirectory(src/libs/glad)
+add_subdirectory(src/utils)
 
-target_link_libraries(engine PRIVATE SFML::Graphics SFML::Window SFML::System)
+add_executable(main_app
+    src/main.cpp
+)
 
-set_target_properties(engine PROPERTIES
+target_include_directories(main_app PRIVATE
+    src
+)
+
+target_link_libraries(main_app PRIVATE
+    OpenGL::GL
+    glfw
+    glm::glm
+    glad
+    primitives
+    utils
+)
+
+set_target_properties(main_app PROPERTIES
     RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin
 )
 
-add_custom_target(run
-    COMMAND ${CMAKE_BINARY_DIR}/bin/engine
-    DEPENDS engine
-    WORKING_DIRECTORY ${CMAKE_PROJECT_DIR}
-    COMMENT "Running the engine..."
+add_custom_target(copy_shaders ALL
+    COMMAND ${CMAKE_COMMAND} -E copy_directory
+        ${CMAKE_SOURCE_DIR}/src/shaders
+        ${CMAKE_BINARY_DIR}/bin/shaders
+    COMMENT "Copying shader files..."
 )
+
+add_dependencies(main_app copy_shaders)
+
+add_custom_target(run
+    COMMAND ${CMAKE_BINARY_DIR}/bin/main_app
+    DEPENDS main_app
+    WORKING_DIRECTORY ${CMAKE_BINARY_DIR}/bin
+    COMMENT "Running main application..."
+)
+
+message(STATUS "=== Modern Graphics Engine Configuration ===")
+message(STATUS "OpenGL: ${OPENGL_LIBRARIES}")
+message(STATUS "GLFW3: Found")
+message(STATUS "GLM: Found")
+message(STATUS "Build type: ${CMAKE_BUILD_TYPE}")
+message(STATUS "==========================================")
