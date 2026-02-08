@@ -46,7 +46,14 @@ add_custom_target(copy_shaders ALL
     COMMENT "Copying shader files..."
 )
 
-add_dependencies(main_app copy_shaders)
+add_custom_target(copy_assets ALL
+    COMMAND ${CMAKE_COMMAND} -E copy_directory
+        ${CMAKE_SOURCE_DIR}/src/assets
+        ${CMAKE_BINARY_DIR}/bin/assets
+    COMMENT "Copying assets files..."
+)
+
+add_dependencies(main_app copy_shaders copy_assets)
 
 add_custom_target(run
     COMMAND ${CMAKE_BINARY_DIR}/bin/main_app

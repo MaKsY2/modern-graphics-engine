@@ -164,25 +164,28 @@ private:
 
         std::vector<std::unique_ptr<utils::RenderObject>> scene;
 
-        auto sphere1 = std::make_unique<primitives::Sphere>(1.0f, 64, 128, shader);
-        sphere1->transform.position = {0, 0, 0};
-        sphere1->transform.dirty = true;
-        sphere1->color = {1, 1, 0, 1};
-        scene.push_back(std::move(sphere1));
+        // auto sphere1 = std::make_unique<primitives::Sphere>(1.0f, 64, 128, shader);
+        // sphere1->transform.position = {0, 0, 0};
+        // sphere1->transform.dirty = true;
+        // sphere1->color = {1, 1, 0, 1};
+        // scene.push_back(std::move(sphere1));
 
-        auto cube1 = std::make_unique<primitives::Cube>(glm::vec3(1.0f, 1.0f, 1.0f), shader);
-        cube1->transform.position = {2, 0, 0};
-        cube1->transform.dirty = true;
-        cube1->color = {1, 0, 0, 1};
-        scene.push_back(std::move(cube1));
+        // auto cube1 = std::make_unique<primitives::Cube>(glm::vec3(1.0f, 1.0f, 1.0f), shader);
+        // cube1->transform.position = {2, 0, 0};
+        // cube1->transform.dirty = true;
+        // cube1->color = {1, 0, 0, 1};
+        // scene.push_back(std::move(cube1));
 
         loader::LoadedMeshPU data = loader::LoadGLB_ToCPU_PU("assets/power_armor.glb", false);
-
         const auto objectMesh = std::make_shared<utils::Mesh>();
         objectMesh->upload(data.vertices, data.indices);
 
         auto loadedObject = std::make_unique<utils::RenderObject>(objectMesh, shader);
-        loadedObject->color = {1, 0, 0, 1};
+        loadedObject->color = {0.88f, 0.88f, 0.88f, 1};
+        loadedObject->transform.scale = loadedObject->transform.scale * 0.01f;
+        loadedObject->transform.dirty = true;
+
+        scene.push_back(std::move(loadedObject));
 
         float lastFrame = static_cast<float>(glfwGetTime());
 
