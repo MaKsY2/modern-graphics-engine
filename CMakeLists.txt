@@ -13,6 +13,7 @@ find_package(glfw3 REQUIRED)
 find_package(glm REQUIRED)
 
 add_subdirectory(src/libs/glad)
+add_subdirectory(src/libs/tinygltf-2.9.7)
 add_subdirectory(src/utils)
 
 add_executable(main_app
@@ -27,7 +28,9 @@ target_link_libraries(main_app PRIVATE
     OpenGL::GL
     glfw
     glm::glm
+    tinygltf
     glad
+    obj_loader
     primitives
     utils
 )

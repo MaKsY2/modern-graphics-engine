@@ -1,4 +1,5 @@
 add_subdirectory(primitives)
+add_subdirectory(obj_loader)
 
 add_library(utils STATIC
     shader.cpp
@@ -14,6 +15,7 @@ target_include_directories(utils PUBLIC
 
 target_link_libraries(utils PUBLIC
     glad
+    tinygltf
     glm::glm
     glfw
 )

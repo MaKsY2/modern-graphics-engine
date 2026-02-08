@@ -13,6 +13,8 @@
 #include <vector>
 #include <chrono>
 #include <memory>
+#include <array>
+#include "obj_loader/gltfLoaderTiny.hpp"
 
 #define LOG(msg) std::cout << "[INFO] " << msg << std::endl
 #define LOG_ERROR(msg) std::cerr << "[ERROR] " << msg << std::endl
@@ -32,9 +34,19 @@ private:
     GLFWwindow *window;
     std::shared_ptr<Shader> shader;
 
-    glm::vec3 cameraPos = glm::vec3(2.0f, 2.0f, 2.0f);
-    float cameraYaw = -45.0f;
-    float cameraPitch = -35.0f;
+    glm::vec3 cameraPos = glm::vec3(0.0f, 0.0f, 3.0f);
+    float cameraYaw = -90.0f;
+    float cameraPitch = 0.0f;
+
+    std::array<bool, GLFW_KEY_LAST + 1> keys{};
+    bool rotating = false;
+    bool firstMouse = true;
+
+    double lastX = 0.0;
+    double lastY = 0.0;
+
+    float mouseSensetive = 0.1f;
+    float moveSpeed = 3.0f;
 
     const int WIDTH = 1280;
     const int HEIGHT = 800;
@@ -93,52 +105,56 @@ private:
 
         glfwSetKeyCallback(window, [](GLFWwindow *win, int key, int scancode, int action, int mods)
                            {
-            auto app = reinterpret_cast<OpenGLCubeApp*>(glfwGetWindowUserPointer(win));
-            if (action == GLFW_PRESS || action == GLFW_REPEAT) {
-                float speed = 0.1f;
-                glm::vec3 forward;
-                forward.x = cos(glm::radians(app->cameraYaw)) * cos(glm::radians(app->cameraPitch));
-                forward.y = sin(glm::radians(app->cameraPitch));
-                forward.z = sin(glm::radians(app->cameraYaw)) * cos(glm::radians(app->cameraPitch));
-                forward = glm::normalize(forward);
-                glm::vec3 right = glm::normalize(glm::cross(forward, glm::vec3(0.0f, 1.0f, 0.0f)));
-                
-                if (key == GLFW_KEY_W) app->cameraPos += forward * speed;
-                if (key == GLFW_KEY_S) app->cameraPos -= forward * speed;
-                if (key == GLFW_KEY_A) app->cameraPos -= right * speed;
-                if (key == GLFW_KEY_D) app->cameraPos += right * speed;
-                if (key == GLFW_KEY_ESCAPE) glfwSetWindowShouldClose(win, true);
-            } });
+            (void)scancode; (void)mods;
+    auto *app = reinterpret_cast<OpenGLCubeApp*>(glfwGetWindowUserPointer(win));
+    if (!app) return;
+
+    if (key == GLFW_KEY_ESCAPE && action == GLFW_PRESS)
+        glfwSetWindowShouldClose(win, true);
+
+    if (key >= 0 && key <= GLFW_KEY_LAST) {
+        if (action == GLFW_PRESS)   app->keys[key] = true;
+        if (action == GLFW_RELEASE) app->keys[key] = false;
+    } });
+
+        glfwSetMouseButtonCallback(window, [](GLFWwindow *win, int button, int action, int mods)
+                                   {
+    (void)mods;
+    auto *app = reinterpret_cast<OpenGLCubeApp*>(glfwGetWindowUserPointer(win));
+    if (!app) return;
+
+    if (button == GLFW_MOUSE_BUTTON_RIGHT) {
+        if (action == GLFW_PRESS) {
+            app->rotating = true;
+            app->firstMouse = true; 
+        } else if (action == GLFW_RELEASE) {
+            app->rotating = false;
+        }
+    } });
 
         glfwSetCursorPosCallback(window, [](GLFWwindow *win, double xpos, double ypos)
                                  {
-            static double lastX = 640, lastY = 400;
-            static bool firstMouse = true;
-            
-            if (glfwGetMouseButton(win, GLFW_MOUSE_BUTTON_RIGHT) == GLFW_PRESS) {
-                if (firstMouse) {
-                    lastX = xpos;
-                    lastY = ypos;
-                    firstMouse = false;
-                }
-                
-                float xoffset = xpos - lastX;
-                float yoffset = lastY - ypos;
-                lastX = xpos;
-                lastY = ypos;
-                
+    auto *app = reinterpret_cast<OpenGLCubeApp*>(glfwGetWindowUserPointer(win));
+    if (!app || !app->rotating) return;
 
-                // это пиздец с reinterpret_cast, но работает 
-                auto app = reinterpret_cast<OpenGLCubeApp*>(glfwGetWindowUserPointer(win));
-                app->cameraYaw += xoffset * 0.1f;
-                app->cameraPitch += yoffset * 0.1f;
-                
-                if (app->cameraPitch > 89.0f) app->cameraPitch = 89.0f;
-                if (app->cameraPitch < -89.0f) app->cameraPitch = -89.0f;
-            } else {
-                firstMouse = true;
-            } });
+    if (app->firstMouse) {
+        app->lastX = xpos;
+        app->lastY = ypos;
+        app->firstMouse = false;
+        return;
+    }
 
+    float xoffset = static_cast<float>(xpos - app->lastX);
+    float yoffset = static_cast<float>(app->lastY - ypos);
+
+    app->lastX = xpos;
+    app->lastY = ypos;
+
+    app->cameraYaw   += xoffset * app->mouseSensetive;
+    app->cameraPitch += yoffset * app->mouseSensetive;
+
+    if (app->cameraPitch > 89.0f)  app->cameraPitch = 89.0f;
+    if (app->cameraPitch < -89.0f) app->cameraPitch = -89.0f; });
         std::cout << "\nControls:\n";
         std::cout << "  W/A/S/D - Move camera\n";
         std::cout << "  Right Mouse + Drag - Rotate camera\n";
@@ -160,9 +176,43 @@ private:
         cube1->color = {1, 0, 0, 1};
         scene.push_back(std::move(cube1));
 
+        loader::LoadedMeshPU data = loader::LoadGLB_ToCPU_PU("assets/power_armor.glb", false);
+
+        const auto objectMesh = std::make_shared<utils::Mesh>();
+        objectMesh->upload(data.vertices, data.indices);
+
+        auto loadedObject = std::make_unique<utils::RenderObject>(objectMesh, shader);
+        loadedObject->color = {1, 0, 0, 1};
+
+        float lastFrame = static_cast<float>(glfwGetTime());
+
         while (!glfwWindowShouldClose(window))
         {
+
             glfwPollEvents();
+
+            float now = (float)glfwGetTime();
+            float dt = now - lastFrame;
+            lastFrame = now;
+
+            // направление взгляда из yaw/pitch
+            glm::vec3 forward;
+            forward.x = cos(glm::radians(cameraYaw)) * cos(glm::radians(cameraPitch));
+            forward.y = sin(glm::radians(cameraPitch));
+            forward.z = sin(glm::radians(cameraYaw)) * cos(glm::radians(cameraPitch));
+            forward = glm::normalize(forward);
+
+            glm::vec3 right = glm::normalize(glm::cross(forward, glm::vec3(0.0f, 1.0f, 0.0f)));
+
+            float v = moveSpeed * dt;
+            if (keys[GLFW_KEY_W])
+                cameraPos += forward * v;
+            if (keys[GLFW_KEY_S])
+                cameraPos -= forward * v;
+            if (keys[GLFW_KEY_A])
+                cameraPos -= right * v;
+            if (keys[GLFW_KEY_D])
+                cameraPos += right * v;
 
             auto currentTime = std::chrono::high_resolution_clock::now();
             float time = std::chrono::duration<float>(currentTime - startTime).count();
@@ -172,8 +222,8 @@ private:
 
             shader->use();
 
-            glm::vec3 cubeCenter(0.0f, 0.0f, 0.0f);
-            glm::mat4 view = glm::lookAt(cameraPos, cubeCenter, glm::vec3(0.0f, 1.0f, 0.0f));
+            glm::mat4 view = glm::lookAt(cameraPos, cameraPos + forward, glm::vec3(0.0f, 1.0f, 0.0f));
+
             glm::mat4 proj = glm::perspective(glm::radians(45.0f), (float)WIDTH / (float)HEIGHT, 0.1f, 100.0f);
 
             shader->setMat4("view", view);
