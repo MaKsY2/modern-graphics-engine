@@ -9,18 +9,10 @@
 #include "../mesh.hpp"
 
 namespace loader {
-struct LoadedVertex {
-  glm::vec3 pos{};
-  glm::vec3 normal{};
-};
 
-struct LoadedMeshPU {
-  std::vector<utils::VertexPU> vertices;
-  std::vector<std::uint32_t> indices;
-};
-// что-то типо передаем в цпу vertices и indices
-// Добавить std::runtime_error
-LoadedMeshPU LoadGLB_ToCPU_PU(const std::string& path, bool flipV);
+utils::ModelData LoadGLB_ToCPU(const std::string& path);
+
+void DestroyModelTextures(utils::ModelData& m);
 
 }  // namespace loader
 #endif

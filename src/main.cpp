@@ -1,5 +1,7 @@
-#include <GLFW/glfw3.h>
+// clang-format off
 #include <glad/glad.h>
+#include <GLFW/glfw3.h>
+// clang-format on
 
 #include <array>
 #include <chrono>
@@ -84,7 +86,7 @@ class OpenGLCubeApp {
     LOG("OpenGL Version: " << glGetString(GL_VERSION));
     LOG("GLSL Version: " << glGetString(GL_SHADING_LANGUAGE_VERSION));
 
-    shader = std::make_shared<Shader>("shaders/vert.vert", "shaders/frag.frag");
+    shader = std::make_shared<Shader>("shaders/lit.vert", "shaders/lit.frag");
 
     glEnable(GL_DEPTH_TEST);
 
@@ -177,14 +179,13 @@ class OpenGLCubeApp {
     // cube1->color = {1, 0, 0, 1};
     // scene.push_back(std::move(cube1));
 
-    loader::LoadedMeshPU data =
-        loader::LoadGLB_ToCPU_PU("assets/power_armor.glb", false);
+    const auto data = std::make_shared<utils::ModelData>(
+        loader::LoadGLB_ToCPU("assets/power_armor.glb"));
     const auto objectMesh = std::make_shared<utils::Mesh>();
-    objectMesh->upload(data.vertices, data.indices);
+    objectMesh->upload(data->vertices, data->indices);
 
     auto loadedObject =
-        std::make_unique<utils::RenderObject>(objectMesh, shader);
-    loadedObject->color = {0.88f, 0.88f, 0.88f, 1};
+        std::make_unique<utils::RenderObject>(objectMesh, shader, data);
     loadedObject->transform.scale = loadedObject->transform.scale * 0.01f;
     loadedObject->transform.dirty = true;
 
@@ -195,7 +196,7 @@ class OpenGLCubeApp {
     while (!glfwWindowShouldClose(window)) {
       glfwPollEvents();
 
-      float now = (float)glfwGetTime();
+      float now = static_cast<float>(glfwGetTime());
       float dt = now - lastFrame;
       lastFrame = now;
 
@@ -222,7 +223,7 @@ class OpenGLCubeApp {
       glClearColor(0.1f, 0.1f, 0.15f, 1.0f);
       glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
-    //   shader->use();
+      //   shader->use();
 
       glm::mat4 view = glm::lookAt(cameraPos, cameraPos + forward,
                                    glm::vec3(0.0f, 1.0f, 0.0f));
