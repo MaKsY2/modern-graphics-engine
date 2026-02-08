@@ -1,31 +1,33 @@
 #ifndef RENDER_OBJECT_HPP
 #define RENDER_OBJECT_HPP
 
-#include "transform.hpp"
-#include "shader.hpp"
-#include "mesh.hpp"
-
 #include <memory>
 
-namespace utils
-{
+#include "mesh.hpp"
+#include "shader.hpp"
+#include "transform.hpp"
 
-    class RenderObject
-    {
-    private:
-        std::shared_ptr<Mesh> mesh_;
-        std::shared_ptr<Shader> shader_;
+namespace utils {
 
-    public:
-        Transform transform;
-        glm::vec4 color{1.0f, 1.0f, 1.0f, 1.0f};
+class RenderObject {
+ private:
+  std::shared_ptr<Mesh> mesh_;
+  std::shared_ptr<Shader> shader_;
+  std::shared_ptr<ModelData> modelData_;
 
-        RenderObject(const std::shared_ptr<Mesh> &, const std::shared_ptr<Shader> &);
-        virtual ~RenderObject() = default;
+ public:
+  Transform transform;
+  glm::vec4 color{1.0f, 1.0f, 1.0f, 1.0f};
 
-        virtual void draw(const glm::mat4 &) const;
-    };
+  RenderObject(const std::shared_ptr<Mesh>&, const std::shared_ptr<Shader>&);
+  RenderObject(const std::shared_ptr<Mesh>& mesh,
+               const std::shared_ptr<Shader>& shader,
+               const std::shared_ptr<ModelData>& modelData);
+  virtual ~RenderObject() = default;
 
-} // namespace utils
+  virtual void draw(const glm::mat4&) const;
+};
+
+}  // namespace utils
 
 #endif

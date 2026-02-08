@@ -2,45 +2,69 @@
 #define MESH_HPP
 
 #include <glad/glad.h>
+
 #include <glm/glm.hpp>
 #include <vector>
 
-namespace utils
-{
+namespace utils {
 
-    struct VertexPU
-    {
-        glm::vec3 pos;
-        glm::vec2 uv;
-    };
+struct VertexPU {
+  glm::vec3 pos;
+  glm::vec2 uv;
+  glm::vec3 normal;
 
-    class Mesh
-    {
-    public:
-        ~Mesh();
+  VertexPU(glm::vec3 pos, glm::vec2 uv);
+  VertexPU() = default;
+  VertexPU(glm::vec3 pos, glm::vec2 uv, glm::vec3 normal);
+};
 
-        Mesh &operator=(const Mesh &) = delete;
-        Mesh &operator=(Mesh &&);
+struct MaterialGL {
+  glm::vec4 baseColorFactor{1, 1, 1, 1};
+  GLuint baseColorTex = 0;
+  bool hasBaseColorTex = false;
+};
 
-        Mesh(const Mesh &) = delete;
-        Mesh(Mesh &&) noexcept;
-        Mesh() = default;
+struct Submesh {
+  std::uint32_t indexOffset = 0;
+  std::uint32_t indexCount = 0;
+  int materialIndex = -1;
+};
 
-        void upload(const std::vector<VertexPU> &vertices,
-                    const std::vector<uint32_t> &indices = {});
-        void draw(GLenum prim = GL_TRIANGLES) const;
+struct ModelData {
+  std::vector<VertexPU> vertices;
+  std::vector<std::uint32_t> indices;
+  std::vector<MaterialGL> materials;
+  std::vector<Submesh> submeshes;
+};
 
-    private:
-        void destroy();
+class Mesh {
+ public:
+  ~Mesh();
 
-        void moveFrom(Mesh &&o);
+  Mesh& operator=(const Mesh&) = delete;
+  Mesh& operator=(Mesh&&);
 
-        GLuint vao_ = 0, vbo_ = 0, ebo_ = 0;
-        GLsizei vertexCount_ = 0;
-        GLsizei indexCount_ = 0;
-        bool indexed_ = false;
-    };
+  Mesh(const Mesh&) = delete;
+  Mesh(Mesh&&) noexcept;
+  Mesh() = default;
 
-} // namespace utils
+  void upload(const std::vector<VertexPU>& vertices,
+              const std::vector<uint32_t>& indices = {});
+  void draw(GLenum prim = GL_TRIANGLES) const;
+  void drawRange(std::uint32_t indexOffset, std::uint32_t indexCount,
+                 GLenum prim = GL_TRIANGLES) const;
+
+ private:
+  void destroy();
+
+  void moveFrom(Mesh&& o);
+
+  GLuint vao_ = 0, vbo_ = 0, ebo_ = 0;
+  GLsizei vertexCount_ = 0;
+  GLsizei indexCount_ = 0;
+  bool indexed_ = false;
+};
+
+}  // namespace utils
 
 #endif
